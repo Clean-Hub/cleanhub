@@ -5,6 +5,7 @@
 .navbarLogo {
   width: 266px;
   height: 49px;
+  cursor: pointer;
 }
 .navbarLeft {
   flex: 1;
@@ -17,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 90px;
+  gap: 40px;
   list-style: none;
 }
 .navbarLi {
@@ -26,4 +27,5 @@
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
+  padding-right: 70px;
 }
