@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
-  cursor: pointer;
 }
 .homeHeroGet {
   margin-right: 40px;
@@ -48,7 +47,6 @@
   border-radius: 8px;
   border: none;
   color: #ffffff;
-  cursor: pointer;
 }
 .homeheroSign {
   margin-left: 40px;

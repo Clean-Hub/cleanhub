@@ -9,17 +9,16 @@
 }
 .navbarLeft {
   flex: 1;
+  padding-left: 50px;
+  padding-right: 70px;
 }
 .navbarRight {
   flex: 3;
   padding-top: 15px;
+  padding-left: 300px;
 }
 .navbarUl {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-right: 300px;
-  gap: 50px;
   list-style: none;
 }
 .navbarLi {
@@ -29,4 +28,5 @@
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
+  padding-left: 20px;
 }
