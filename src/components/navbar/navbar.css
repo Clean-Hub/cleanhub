@@ -5,14 +5,13 @@
 .navbarLogo {
   width: 266px;
   height: 49px;
-  left: 43px;
-  top: 44px;
 }
 .navbarLeft {
   flex: 1;
 }
 .navbarRight {
   flex: 3;
+  padding-top: 15px;
 }
 .navbarUl {
   display: flex;
@@ -27,8 +26,5 @@
   font-weight: 800;
   font-size: 19px;
   line-height: 26px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
   cursor: pointer;
 }
