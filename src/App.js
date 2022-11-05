@@ -1,7 +1,9 @@
+import Navbar from './components/navbar/Navbar'
+
 function App() {
   return (
     <div className='App'>
-      <h1>Welcome to Clean Hub</h1>
+      <Navbar />
     </div>
   )
 }
