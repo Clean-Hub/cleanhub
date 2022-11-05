@@ -1,7 +1,26 @@
-import React from 'react'
+import './homeHero.css'
 
 const HomeHero = () => {
-  return <div>HomeHero</div>
+  return (
+    <div>
+      <div className='homeHeroL'>
+        <h1 className='homeHeroT'>
+          RE-USE THE <span className='homeHeroTSpan'>REFUSE</span>
+        </h1>
+        <p className='homeHeroP'>
+          All for the love of a cleaner Lagos and a better environment, let’s
+          put the recyclable trash to good use. Become an active trash depositor
+          and stand a chance to get a reward or maybe you just want those
+          recyclable trash for your business... WE’VE GOT YOU COVERED.
+        </p>
+        <div className='homeHeroButton'>
+          <button className='homeheroGet'>GET STARTED</button>
+          <button className='homeheroSign'>SIGN IN</button>
+        </div>
+      </div>
+      <div className='homeHeroR'></div>
+    </div>
+  )
 }
 
 export default HomeHero
