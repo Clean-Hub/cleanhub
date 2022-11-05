@@ -1,4 +1,7 @@
 import './homeHero.css'
+import appleImg from '../../assets/img/apple.png'
+// import wasteBin from '../../assets/img/waste-bin.jpeg'
+import wasteBin2 from '../../assets/img/wasteBin2.png'
 
 const HomeHero = () => {
   return (
@@ -18,7 +21,12 @@ const HomeHero = () => {
           <button className='homeheroSign'>SIGN IN</button>
         </div>
       </div>
-      <div className='homeHeroR'></div>
+      <div className='homeHeroR'>
+        <div className='appleImg'>
+          <img src={appleImg} alt='apple background' />
+        </div>
+        <img src={wasteBin2} alt='wasteBin2' />
+      </div>
     </div>
   )
 }
