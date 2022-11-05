@@ -5,7 +5,7 @@ import wasteBin2 from '../../assets/img/wasteBin2.png'
 
 const HomeHero = () => {
   return (
-    <div>
+    <div className='homeHeroContainer'>
       <div className='homeHeroL'>
         <h1 className='homeHeroT'>
           RE-USE THE <span className='homeHeroTSpan'>REFUSE</span>
@@ -17,15 +17,15 @@ const HomeHero = () => {
           recyclable trash for your business... WE’VE GOT YOU COVERED.
         </p>
         <div className='homeHeroButton'>
-          <button className='homeheroGet'>GET STARTED</button>
+          <button className='homeHeroGet'>GET STARTED</button>
           <button className='homeheroSign'>SIGN IN</button>
         </div>
       </div>
       <div className='homeHeroR'>
         <div className='appleImg'>
-          <img src={appleImg} alt='apple background' />
+          <img src={appleImg} alt='apple background' className='appleImg' />
+          <img src={wasteBin2} alt='wasteBin2' className='wasteBin2' />
         </div>
-        <img src={wasteBin2} alt='wasteBin2' />
       </div>
     </div>
   )
