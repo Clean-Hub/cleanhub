@@ -1,6 +1,8 @@
 .navbarContainer {
   display: flex;
   padding: 30px;
+  width: 1440px;
+  height: 921.19px;
 }
 .navbarLogo {
   width: 266px;
@@ -22,6 +24,7 @@
   list-style: none;
 }
 .navbarLi {
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
   font-size: 19px;
