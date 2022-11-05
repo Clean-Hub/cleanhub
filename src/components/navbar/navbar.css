@@ -17,13 +17,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 90px;
   list-style: none;
 }
 .navbarLi {
-  font-family: 'Nunito';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
