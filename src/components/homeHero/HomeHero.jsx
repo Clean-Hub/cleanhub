@@ -1,6 +1,5 @@
 import './homeHero.css'
 import appleImg from '../../assets/img/apple.png'
-// import wasteBin from '../../assets/img/waste-bin.jpeg'
 import wasteBin2 from '../../assets/img/wasteBin2.png'
 
 const HomeHero = () => {
@@ -22,10 +21,8 @@ const HomeHero = () => {
         </div>
       </div>
       <div className='homeHeroR'>
-        <div className='appleImg'>
-          <img src={appleImg} alt='apple background' className='appleImg' />
-          <img src={wasteBin2} alt='wasteBin2' className='wasteBin2' />
-        </div>
+        <img src={appleImg} alt='apple background' className='appleImg' />
+        <img src={wasteBin2} alt='wasteBin2' className='wasteBin2' />
       </div>
     </div>
   )
