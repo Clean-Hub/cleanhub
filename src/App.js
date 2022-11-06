@@ -1,12 +1,12 @@
 import Navbar from './components/navbar/Navbar'
-import HomeHero from './components/homeHero/HomeHero'
 import './app.css'
+import Home from './home/Home'
 
 function App() {
   return (
     <div className='appContainer'>
       <Navbar />
-      <HomeHero />
+      <Home />
     </div>
   )
 }
