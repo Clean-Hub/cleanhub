@@ -2,7 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 145px;
+}
+.recyclingLogoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .recyclingImg {
   width: 103px;
@@ -13,7 +19,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   display: flex;
   align-items: center;

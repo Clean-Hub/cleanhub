@@ -5,7 +5,7 @@ const RecyclingLogo = () => {
   return (
     <div className='recyclingLogoContainer'>
       {logo.map((item) => (
-        <div>
+        <div className='recyclingLogoWrapper'>
           <img src={item.photo} alt='' className='recyclingImg' />
           <h2 className='recyclingH'>{item.name}</h2>
         </div>

@@ -1,3 +1,4 @@
+import HomeRecyclingCard from '../homeRecyclingCard/HomeRecyclingCard'
 import RecyclingLogo from '../recyclingLogo/RecyclingLogo'
 import './homeRecycling.css'
 
@@ -11,6 +12,7 @@ const HomeRecycling = () => {
         </p>
       </div>
       <RecyclingLogo />
+      <HomeRecyclingCard />
     </div>
   )
 }
