@@ -1,13 +1,13 @@
-import React from 'react'
+import './recyclingLogo.css'
 import logo from '../../demoData'
 
 const RecyclingLogo = () => {
   return (
-    <div>
+    <div className='recyclingLogoContainer'>
       {logo.map((item) => (
         <div>
-          <img src={item.photo} alt='' />
-          <h2>{item.name}</h2>
+          <img src={item.photo} alt='' className='recyclingImg' />
+          <h2 className='recyclingH'>{item.name}</h2>
         </div>
       ))}
     </div>

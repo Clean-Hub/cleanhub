@@ -1,0 +1,21 @@
+.recyclingLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.recyclingImg {
+  width: 103px;
+  height: 103px;
+  object-fit: contain;
+}
+.recyclingH {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
