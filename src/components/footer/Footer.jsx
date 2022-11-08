@@ -16,41 +16,47 @@ const Footer = () => {
 
           <p className='footerText'>SUBSCRIBE TO OUR NEWSLETTER</p>
           <div className='footerSubscribe'>
-            <input type='text' placeholder='Enter your email address' />
+            <input
+              type='text'
+              placeholder='Enter your email address'
+              className='footerSubscribeInput'
+            />
             <button className='footerSubscribeBtn'>SUBSCRIBE</button>
           </div>
         </div>
         <div className='footerTR'>
           <div className=''>
-            <h4 className=''>ABOUT US</h4>
-            <ul className=''>
-              <li className=''>Who we are</li>
-              <li className=''>Our Mission</li>
-              <li className=''>Services</li>
-              <li className=''>Our Projects</li>
-              <li className=''>Partnerships</li>
+            <h4 className='footerH'>ABOUT US</h4>
+            <ul className='footerUl'>
+              <li className='footerUi'>Who we are</li>
+              <li className='footerUi'>Our Mission</li>
+              <li className='footerUi'>Services</li>
+              <li className='footerUi'>Our Projects</li>
+              <li className='footerUi'>Partnerships</li>
             </ul>
           </div>
           <div className=''>
-            <h4 className=''>RESOURCES</h4>
-            <ul className=''>
-              <li className=''>Careers</li>
-              <li className=''>Blog</li>
-              <li className=''>My Points</li>
-              <li className=''>Gallery</li>
-              <li className=''>FAQS</li>
+            <h4 className='footerH'>RESOURCES</h4>
+            <ul className='footerUl'>
+              <li className='footerUi'>Careers</li>
+              <li className='footerUi'>Blog</li>
+              <li className='footerUi'>My Points</li>
+              <li className='footerUi'>Gallery</li>
+              <li className='footerUi'>FAQS</li>
             </ul>
           </div>
           <div className=''>
-            <h4 className=''>CONTACT US</h4>
+            <h4 className='footerH contact'>CONTACT US</h4>
             <div className='house'>
-              <h3>8 Jubliee-CMD Road, Magodo, Lagos State</h3>
+              <h3 className='footerHC'>
+                8 Jubliee-CMD Road, Magodo, Lagos State
+              </h3>
             </div>
             <div className='phone'>
-              <h3>+2349000099900</h3>
+              <h3 className='footerHC'>+2349000099900</h3>
             </div>
             <div className='email'>
-              <h3>hello@klinlag.ng</h3>
+              <h3 className='footerHC'>hello@klinlag.ng</h3>
             </div>
           </div>
         </div>
