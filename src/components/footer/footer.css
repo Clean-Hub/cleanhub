@@ -18,6 +18,10 @@
   margin-left: 10px;
   margin-bottom: 80px;
 }
+.footerLogo {
+  padding-right: 130px;
+  margin-left: 10px;
+}
 .footerText {
   font-family: 'Nunito';
   font-style: normal;
@@ -26,6 +30,9 @@
   line-height: 22px;
   color: #ffffff;
   padding-bottom: 20px;
+  padding-right: 40px;
+  padding-top: 20px;
+  margin-left: 10px;
 }
 .footerSubscribe {
   display: flex;
@@ -77,6 +84,24 @@
 .contact {
   padding-bottom: 20px;
 }
+.house,
+.phone,
+.email {
+  display: flex;
+}
+.footerHC {
+  padding-left: 20px;
+}
+.iconF {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .footerUl {
   list-style: none;
   padding-top: 20px;
@@ -98,4 +123,68 @@
   line-height: 16px;
   color: #ffffff;
   padding-bottom: 20px;
+}
+
+.footerB {
+  display: flex;
+  flex-direction: column;
+}
+.footerBConnect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.footerBConnectH {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.footerBConnectSpan {
+  width: 512px;
+  height: 0px;
+  border: 1px solid #ffffff36;
+}
+
+.footerBSocial {
+  display: flex;
+}
+.footerBSocialL {
+  flex: 1;
+}
+.footerBSocialLUl {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 50px;
+}
+.footerBSocialLLi {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.footerBSocialR {
+  flex: 2;
+}
+.footerBSocialRUl {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 150px;
+}
+.footerBSocialLi {
+  padding-right: 30px;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
 }

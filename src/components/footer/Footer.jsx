@@ -6,7 +6,9 @@ import {
   faTwitterSquare,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/footerlogo.png'
+import { faHouse, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 const Footer = () => {
   return (
     <div className='footerContainer'>
@@ -48,14 +50,17 @@ const Footer = () => {
           <div className=''>
             <h4 className='footerH contact'>CONTACT US</h4>
             <div className='house'>
+              <FontAwesomeIcon icon={faHouse} className='iconF' />
               <h3 className='footerHC'>
                 8 Jubliee-CMD Road, Magodo, Lagos State
               </h3>
             </div>
             <div className='phone'>
+              <FontAwesomeIcon icon={faPhone} className='iconF' />
               <h3 className='footerHC'>+2349000099900</h3>
             </div>
             <div className='email'>
+              <FontAwesomeIcon icon={faEnvelope} className='iconF' />
               <h3 className='footerHC'>hello@klinlag.ng</h3>
             </div>
           </div>
@@ -63,28 +68,29 @@ const Footer = () => {
       </div>
       <div className='footerB'>
         <div className='footerBConnect'>
-          <span></span>
-          <h3>CONNECT WITH US</h3>
+          <span className='footerBConnectSpan'></span>
+          <h3 className='footerBConnectH'>CONNECT WITH US</h3>
+          <span className='footerBConnectSpan'></span>
         </div>
         <div className='footerBSocial'>
           <div className='footerBSocialL'>
-            <ul>
-              <li>Terms</li>
-              <li>Privacy</li>
+            <ul className='footerBSocialLUl'>
+              <li className='footerBSocialLLi'>Terms</li>
+              <li className='footerBSocialLLi'>Privacy</li>
             </ul>
           </div>
           <div className='footerBSocialR'>
-            <ul>
-              <li>
+            <ul className='footerBSocialRUl'>
+              <li className='footerBSocialLi'>
                 <FontAwesomeIcon icon={faFacebookSquare} />
               </li>
-              <li>
+              <li className='footerBSocialLi'>
                 <FontAwesomeIcon icon={faTwitterSquare} />
               </li>
-              <li>
+              <li className='footerBSocialLi'>
                 <FontAwesomeIcon icon={faInstagram} />
               </li>
-              <li>
+              <li className='footerBSocialLi'>
                 <FontAwesomeIcon icon={faYoutube} />
               </li>
             </ul>
