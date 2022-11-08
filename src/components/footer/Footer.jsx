@@ -1,9 +1,9 @@
 import './footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faFacebook,
+  faFacebookSquare,
   faInstagram,
-  faTwitter,
+  faTwitterSquare,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 import logo from '../../assets/img/logo.png'
@@ -43,6 +43,15 @@ const Footer = () => {
           </div>
           <div className=''>
             <h4 className=''>CONTACT US</h4>
+            <div className='house'>
+              <h3>8 Jubliee-CMD Road, Magodo, Lagos State</h3>
+            </div>
+            <div className='phone'>
+              <h3>+2349000099900</h3>
+            </div>
+            <div className='email'>
+              <h3>hello@klinlag.ng</h3>
+            </div>
           </div>
         </div>
       </div>
@@ -61,10 +70,10 @@ const Footer = () => {
           <div className='footerBSocialR'>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faFacebookSquare} />
               </li>
               <li>
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faTwitterSquare} />
               </li>
               <li>
                 <FontAwesomeIcon icon={faInstagram} />

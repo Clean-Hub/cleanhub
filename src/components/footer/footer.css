@@ -1,0 +1,6 @@
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2ba84a;
+}
