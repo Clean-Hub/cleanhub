@@ -1,6 +1,7 @@
 import './homeHero.css'
 import appleImg from '../../assets/img/apple.png'
 import wasteBin2 from '../../assets/img/wasteBin2.png'
+import { Link } from 'react-router-dom'
 
 const HomeHero = () => {
   return (
@@ -17,7 +18,9 @@ const HomeHero = () => {
         </p>
         <div className='homeHeroButton'>
           <button className='homeHeroGet'>GET STARTED</button>
-          <button className='homeheroSign'>SIGN IN</button>
+          <button className='homeheroSign'>
+            <Link to='/login'>SIGN IN</Link>
+          </button>
         </div>
       </div>
       <div className='homeHeroR'>
