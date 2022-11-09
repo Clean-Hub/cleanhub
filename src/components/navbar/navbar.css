@@ -22,7 +22,7 @@
   display: flex;
   list-style: none;
 }
-.navbarLi {
+.navbarLi1 {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
@@ -31,4 +31,15 @@
   cursor: pointer;
   padding-left: 20px;
   color: #ffffff;
+}
+
+.navbarLi2 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 26px;
+  cursor: pointer;
+  padding-left: 20px;
+  color: #02230a;
 }

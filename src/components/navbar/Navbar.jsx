@@ -1,8 +1,12 @@
 import './navbar.css'
 import logo from '../../assets/img/logo.png'
-import { Link } from 'react-router-dom'
-
+import { Link, useLocation } from 'react-router-dom'
 const Navbar = () => {
+  const { pathname } = useLocation()
+  // console.log('pathname', pathname.split('/')[1])
+  const url = pathname.split('/')[1]
+  // const url = login
+  console.log('url', url)
   return (
     <div className='navbarContainer'>
       <div className='navbarLeft'>
@@ -12,19 +16,19 @@ const Navbar = () => {
       </div>
       <div className='navbarRight'>
         <ul className='navbarUl'>
-          <li className='navbarLi'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='/'>HOME</Link>
           </li>
-          <li className='navbarLi'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#'>ABOUT US</Link>
           </li>
-          <li className='navbarLi'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#'>HOW IT WORKS</Link>
           </li>
-          <li className='navbarLi'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#'>CONTACT</Link>
           </li>
-          <li className='navbarLi'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#'>BLOG</Link>
           </li>
         </ul>
