@@ -35,3 +35,52 @@
   border: 3px solid #2ba84a;
   margin-top: 10px;
 }
+.loginRForm {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.loginRFormL {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+  margin-top: 20px;
+}
+.loginRFormInput {
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Nunito';
+  font-style: normal;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+}
+.loginRFormInput:focus {
+  outline: none;
+}
+.inputPass {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #c4c4c4;
+}
+.passwordBtn {
+  width: 90%;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Nunito';
+  font-style: normal;
+  border: none;
+}
+.passwordBtn:focus {
+  outline: none;
+}
+.eyes {
+  font-size: 15px;
+  color: #c4c4c4;
+  cursor: pointer;
+}

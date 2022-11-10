@@ -1,5 +1,7 @@
 import './login.css'
 import logo from '../../assets/img/loginLogo.PNG'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-regular-svg-icons'
 
 const Login = () => {
   return (
@@ -12,16 +14,20 @@ const Login = () => {
           <h1 className='loginRHInfoWelcome'>Welcome Back</h1>
           <span className='loginRHInfoSp'></span>
         </div>
-
-        <div className='loginRForm'>
-          <form action=''>
-            <label for='fname'>First name:</label>
-            <input type='text' id='lname' name='lname' value='Doe' />
-            <label for='lname'>Last name:</label>
-            <input type='text' id='lname' name='lname' value='Doe' />
-            <input type='submit' value='Submit' />
-          </form>
-        </div>
+        <form action='' className='loginRForm'>
+          <label for='fname' className='loginRFormL'>
+            Email
+          </label>
+          <input type='text' className='loginRFormInput' />
+          <label for='lname' className='loginRFormL'>
+            Password
+          </label>
+          <div className='inputPass'>
+            <input type='password' className='passwordBtn' />
+            <FontAwesomeIcon icon={faEye} className='eyes' />
+          </div>
+          <input type='submit' value='Submit' />
+        </form>
         <div className='forgetP'>
           <p className='forgetPw'>
             Forget Password? <span className='reset'>Reset Password</span>
