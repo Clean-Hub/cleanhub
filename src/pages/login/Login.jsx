@@ -1,9 +1,12 @@
 import './login.css'
+import logo from '../../assets/img/login_snip.PNG'
 
 const Login = () => {
   return (
     <div className='loginContainer'>
-      <div className='loginL'></div>
+      <div className='loginL'>
+        <img src={logo} alt='logo' className='loginLogo' />
+      </div>
       <div className='loginR'>
         <div className='loginRH'>
           <div className='loginRHInfo'>
