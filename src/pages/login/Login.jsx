@@ -37,9 +37,16 @@ const Login = () => {
           </div>
         </div>
         <div className='signInSocial'>
-          <button className='signInSocialS'>GOOGLE</button>
+          <button className='signInSocialS'>SIGN IN</button>
           <span className='signInSocialOr'>OR</span>
-          <button className='signInSocialG'>GOOGLE</button>
+          <button className='signInSocialG'>
+            <span className='g'>G</span>
+            <span className='o1'>O</span>
+            <span className='o2'>O</span>
+            <span className='g'>G</span>
+            <span className='o2'>L</span>
+            <span className='o1'>E</span>
+          </button>
           <button className='signInSocialF'>FACEBOOK</button>
         </div>
         <div className='signInB'>
