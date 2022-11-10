@@ -1,7 +1,47 @@
 import './login.css'
 
 const Login = () => {
-  return <div className='loginContainer'>Login</div>
+  return (
+    <div className='loginContainer'>
+      <div className='loginL'></div>
+      <div className='loginR'>
+        <div className='loginRH'>
+          <div className='loginRHInfo'>
+            <h1 className='welcome'>Welcome Back</h1>
+            <span className='welcomeSp'></span>
+          </div>
+        </div>
+        <div className='loginRForm'>
+          <form action=''>
+            <label for='fname'>First name:</label>
+            <input type='text' id='lname' name='lname' value='Doe' />
+            <label for='lname'>Last name:</label>
+            <input type='text' id='lname' name='lname' value='Doe' />
+            <input type='submit' value='Submit' />
+          </form>
+        </div>
+        <div className='forgetP'>
+          <p className='forgetPw'>
+            Forget Password? <span className='reset'>Reset Password</span>
+          </p>
+          <div className='rememberMe'>
+            <p className='rememeberMeText'>Remember Me</p>
+            <div className='rememberMeCB'>check box</div>
+          </div>
+        </div>
+      </div>
+      <div className='loginRAuth'>
+        <div className='signInSocial'>
+          <button className='signInSocialG'>GOOGLE</button>
+          <button className='signInSocialG'>FACEBOOK</button>
+        </div>
+        <div className='signInB'>
+          <p className='signInP'>Already have an account?</p>
+          <button className='signInBtn'>SIGN IN</button>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Login
