@@ -84,3 +84,84 @@
   color: #c4c4c4;
   cursor: pointer;
 }
+.forgetP {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.forgetPw {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.reset {
+  color: #2ba84a;
+}
+.rememberMe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rememeberMeText {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.signInSocial {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.signInSocialOr {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  margin-right: 30px;
+}
+.signInSocialG,
+.signInSocialS,
+.signInSocialF {
+  width: 139px;
+  height: 48px;
+  box-shadow: 0px 2px 10px #c4c4c4, inset 0px -1px 0px rgba(14, 14, 44, 0.4);
+  border-radius: 8px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.signInSocialS {
+  background: #ffffff;
+  border: 1px solid #2ba84a;
+  color: #2ba84a;
+}
+.signInSocialG {
+  background-color: #ffffff;
+  border: 1px solid #db4437;
+  color: #4285f4;
+}
+.signInSocialF {
+  background-color: #ffffff;
+  border: 1px solid #4267b2;
+  color: #4267b2;
+}

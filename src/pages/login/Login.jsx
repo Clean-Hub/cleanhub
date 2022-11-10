@@ -26,7 +26,6 @@ const Login = () => {
             <input type='password' className='passwordBtn' />
             <FontAwesomeIcon icon={faEye} className='eyes' />
           </div>
-          <input type='submit' value='Submit' />
         </form>
         <div className='forgetP'>
           <p className='forgetPw'>
@@ -37,10 +36,11 @@ const Login = () => {
             <div className='rememberMeCB'>check box</div>
           </div>
         </div>
-        <div className='loginRAuth'></div>
         <div className='signInSocial'>
+          <button className='signInSocialS'>GOOGLE</button>
+          <span className='signInSocialOr'>OR</span>
           <button className='signInSocialG'>GOOGLE</button>
-          <button className='signInSocialG'>FACEBOOK</button>
+          <button className='signInSocialF'>FACEBOOK</button>
         </div>
         <div className='signInB'>
           <p className='signInP'>Already have an account?</p>
