@@ -8,12 +8,11 @@ const Login = () => {
         <img src={logo} alt='logo' className='loginLogo' />
       </div>
       <div className='loginR'>
-        <div className='loginRH'>
-          <div className='loginRHInfo'>
-            <h1 className='welcome'>Welcome Back</h1>
-            <span className='welcomeSp'></span>
-          </div>
+        <div className='loginRHInfo'>
+          <h1 className='loginRHInfoWelcome'>Welcome Back</h1>
+          <span className='loginRHInfoSp'></span>
         </div>
+
         <div className='loginRForm'>
           <form action=''>
             <label for='fname'>First name:</label>
