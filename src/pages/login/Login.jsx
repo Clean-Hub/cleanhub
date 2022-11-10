@@ -1,5 +1,5 @@
 import './login.css'
-import logo from '../../assets/img/login_snip.PNG'
+import logo from '../../assets/img/loginLogo.PNG'
 
 const Login = () => {
   return (
@@ -32,8 +32,7 @@ const Login = () => {
             <div className='rememberMeCB'>check box</div>
           </div>
         </div>
-      </div>
-      <div className='loginRAuth'>
+        <div className='loginRAuth'></div>
         <div className='signInSocial'>
           <button className='signInSocialG'>GOOGLE</button>
           <button className='signInSocialG'>FACEBOOK</button>
