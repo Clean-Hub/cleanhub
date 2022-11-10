@@ -102,6 +102,7 @@
 }
 .reset {
   color: #2ba84a;
+  cursor: pointer;
 }
 .rememberMe {
   display: flex;
