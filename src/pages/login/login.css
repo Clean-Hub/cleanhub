@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 150px;
+  margin-bottom: 50px;
 }
 .loginRHInfo {
   padding-bottom: 30px;
@@ -117,10 +118,9 @@
   color: #000000;
 }
 .signInSocial {
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   justify-content: center;
   margin-bottom: 20px;
 }
@@ -173,4 +173,36 @@
 }
 .o2 {
   color: #f4b400;
+}
+
+.signInB {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.signInP {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+}
+.signInBtn {
+  width: 164px;
+  height: 48px;
+  background-color: #2ba84a;
+  box-shadow: 0px 2px 10px #c4c4c4, inset 0px -1px 0px rgba(14, 14, 44, 0.4);
+  border-radius: 8px;
+  border: none;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
 }
