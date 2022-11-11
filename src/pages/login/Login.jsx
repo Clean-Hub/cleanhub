@@ -51,7 +51,7 @@ const Login = () => {
         </div>
         <div className='signInB'>
           <p className='signInP'>Already have an account?</p>
-          <button className='signInBtn'>REGISTER</button>
+          <button className='signInBtn'>SIGN UP</button>
         </div>
       </div>
     </div>
