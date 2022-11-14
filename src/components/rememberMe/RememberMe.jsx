@@ -1,7 +1,7 @@
 import React from 'react'
 
-const RememberMe = (props) => {
-  return <input type='checkbox' />
+const RememberMe = ({ onChange }) => {
+  return <input type='checkbox' onChange={onChange} />
 }
 
 export default RememberMe

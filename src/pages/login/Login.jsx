@@ -3,8 +3,10 @@ import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
+import { useState } from 'react'
 
 const Login = () => {
+  const [rememberMe, setRememberMe] = useState(false)
   return (
     <div className='loginContainer'>
       <div className='loginL'>
@@ -35,7 +37,7 @@ const Login = () => {
           <div className='rememberMe'>
             <p className='rememeberMeText'>Remember Me</p>
             <div className='rememberMeCB'>
-              <RememberMe />
+              <RememberMe onChange={(e) => setRememberMe(e.target.checked)} />
             </div>
           </div>
         </div>
