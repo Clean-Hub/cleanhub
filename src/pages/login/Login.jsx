@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
@@ -56,7 +57,9 @@ const Login = () => {
         </div>
         <div className='signInB'>
           <p className='signInP'>Already have an account?</p>
-          <button className='signInBtn'>SIGN UP</button>
+          <Link to='/register'>
+            <button className='signInBtn'>SIGN UP</button>
+          </Link>
         </div>
       </div>
     </div>

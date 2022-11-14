@@ -17,7 +17,9 @@ const HomeHero = () => {
           recyclable trash for your business... WE’VE GOT YOU COVERED.
         </p>
         <div className='homeHeroButton'>
-          <button className='homeHeroGet'>GET STARTED</button>
+          <Link to='/register'>
+            <button className='homeHeroGet'>GET STARTED</button>
+          </Link>
           <button className='homeheroSign'>
             <Link to='/login'>SIGN IN</Link>
           </button>
