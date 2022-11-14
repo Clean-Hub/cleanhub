@@ -2,6 +2,7 @@ import './login.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
+import RememberMe from '../../components/rememberMe/RememberMe'
 
 const Login = () => {
   return (
@@ -33,7 +34,9 @@ const Login = () => {
           </p>
           <div className='rememberMe'>
             <p className='rememeberMeText'>Remember Me</p>
-            <div className='rememberMeCB'>check box</div>
+            <div className='rememberMeCB'>
+              <RememberMe />
+            </div>
           </div>
         </div>
         <div className='signInSocial'>
