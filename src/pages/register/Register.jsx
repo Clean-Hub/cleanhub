@@ -2,6 +2,7 @@ import './register.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -10,7 +11,9 @@ const Register = () => {
         <img src={logo} alt='logo' className='registerLogo' />
         <div className='registerSignInB'>
           <p className='registerSignInP'>Already have an account?</p>
-          <button className='registerSignInSocialS'>SIGN UP</button>
+          <Link to='/'>
+            <button className='registerSignInSocialS'>SIGN IN</button>
+          </Link>
         </div>
       </div>
 
@@ -82,7 +85,7 @@ const Register = () => {
           </div>
         </div>
         <div className='registerSignInSocial'>
-          <button className='registerSignInBtn'>SIGN IN</button>
+          <button className='registerSignInBtn'>SIGN UP</button>
           <span className='registerSignInSocialOr'>OR</span>
           <button className='registerSignInSocialG'>
             <span className='g'>G</span>
