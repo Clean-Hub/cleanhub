@@ -120,6 +120,7 @@
   line-height: 16px;
   color: #ffffff;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 .footerHC {
   font-family: 'Nunito';
