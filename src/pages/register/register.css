@@ -1,14 +1,54 @@
-.loginContainer {
+.registerContainer {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.loginL {
+.registerL {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.loginR {
+.registerLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.registerSignInB {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+.registerSignInP {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  margin-right: 30px;
+}
+.registerSignInBtn {
+  width: 164px;
+  height: 48px;
+  background-color: #2ba84a;
+  box-shadow: 0px 2px 10px #c4c4c4, inset 0px -1px 0px rgba(14, 14, 44, 0.4);
+  border-radius: 8px;
+  border: none;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.registerR {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -16,12 +56,12 @@
   margin-left: 150px;
   margin-bottom: 50px;
 }
-.loginRHInfo {
+.registerRHInfo {
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
-.loginRHInfoWelcome {
+.registerRHInfoWelcome {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
@@ -29,28 +69,28 @@
   line-height: 140%;
   letter-spacing: 3px;
   color: #000000;
+  margin-top: 50px;
 }
-.loginRHInfoSp {
+.registerRHInfoSp {
   width: 156px;
   height: 0px;
   border: 3px solid #2ba84a;
   margin-top: 10px;
 }
-.loginRForm {
+.registerRForm {
   display: flex;
   flex-direction: column;
   width: 90%;
 }
-.loginRFormL {
+.registerRFormL {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
   color: #000000;
-  margin-top: 20px;
 }
-.loginRFormInput {
+.registerRFormInput {
   padding: 5px;
   font-size: 15px;
   font-family: 'Nunito';
@@ -58,15 +98,15 @@
   border: none;
   border-bottom: 2px solid #c4c4c4;
 }
-.loginRFormInput:focus {
+.registerRFormInput:focus {
   outline: none;
 }
 .inputPass {
-  width: 100%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-bottom: 2px solid #c4c4c4;
 }
 .passwordBtn {
@@ -121,25 +161,24 @@
 .rememberMeCB {
   margin-left: 10px;
 }
-.signInSocial {
+.registerSignInSocial {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
-.signInSocialOr {
+.registerSignInSocialOr {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.04em;
-  margin-right: 30px;
 }
-.signInSocialG,
-.signInSocialS,
-.signInSocialF {
+.registerSignInSocialG,
+.registerSignInBtn,
+.registerSignInSocialF {
   width: 139px;
   height: 48px;
   box-shadow: 0px 2px 10px #c4c4c4, inset 0px -1px 0px rgba(14, 14, 44, 0.4);
@@ -151,23 +190,36 @@
   line-height: 22px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-right: 30px;
   cursor: pointer;
 }
-.signInSocialS {
+.registerSignInSocialS {
+  width: 139px;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #2ba84a;
+  box-shadow: 0px -2px 10px rgba(14, 14, 44, 0.1),
+    inset 0px -1px 0px rgba(14, 14, 44, 0.4);
+  border-radius: 8px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: #2ba84a;
+  cursor: pointer;
 }
-.signInSocialG {
+.registerSignInSocialG {
   background-color: #ffffff;
   border: 1px solid #db4437;
   color: #4285f4;
 }
-.signInSocialF {
+.registerSignInSocialF {
   background-color: #ffffff;
   border: 1px solid #4267b2;
   color: #4267b2;
+  margin-right: 110px;
 }
 .g {
   color: #4285f4;
@@ -179,34 +231,24 @@
   color: #f4b400;
 }
 
-.signInB {
-  width: 100%;
+.user {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: center;
 }
-.signInP {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 140%;
-  color: #000000;
+.userL {
+  flex: 1;
 }
-.signInBtn {
-  width: 164px;
-  height: 48px;
-  background-color: #2ba84a;
-  box-shadow: 0px 2px 10px #c4c4c4, inset 0px -1px 0px rgba(14, 14, 44, 0.4);
-  border-radius: 8px;
-  border: none;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  cursor: pointer;
+.userR {
+  flex: 1;
+  margin-top: 10px;
+}
+
+.userDivider {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c4c4c4;
 }

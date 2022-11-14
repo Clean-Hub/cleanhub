@@ -2,32 +2,74 @@ import './register.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
-import RememberMe from '../../components/rememberMe/RememberMe'
-import { useState } from 'react'
 
 const Register = () => {
-  const [rememberMe, setRememberMe] = useState(false)
   return (
-    <div className='loginContainer'>
-      <div className='loginL'>
-        <img src={logo} alt='logo' className='loginLogo' />
-      </div>
-      <div className='loginR'>
-        <div className='loginRHInfo'>
-          <h1 className='loginRHInfoWelcome'>Welcome Back</h1>
-          <span className='loginRHInfoSp'></span>
+    <div className='registerContainer'>
+      <div className='registerL'>
+        <img src={logo} alt='logo' className='registerLogo' />
+        <div className='registerSignInB'>
+          <p className='registerSignInP'>Already have an account?</p>
+          <button className='registerSignInSocialS'>SIGN UP</button>
         </div>
-        <form action='' className='loginRForm'>
-          <label for='fname' className='loginRFormL'>
-            Email
-          </label>
-          <input type='text' className='loginRFormInput' />
-          <label for='lname' className='loginRFormL'>
-            Password
+      </div>
+
+      <div className='registerR'>
+        <div className='registerRHInfo'>
+          <h1 className='registerRHInfoWelcome'>Getting Started</h1>
+          <span className='registerRHInfoSp'></span>
+        </div>
+        <form action='' className='registerRForm'>
+          <div className='user'>
+            <div className='userL'>
+              <label for='lname' className='registerRFormL'>
+                Firstname
+              </label>
+              <div className='userDivider'>
+                <input type='text' className='passwordBtn' />
+              </div>
+            </div>
+            <div className='userR'>
+              <label for='lname' className='registerRFormL'>
+                Lastname
+              </label>
+              <div className='userDivider'>
+                <input type='text' className='passwordBtn' />
+              </div>
+            </div>
+          </div>
+          <label for='lname' className='registerRFormL'>
+            Phone
           </label>
           <div className='inputPass'>
-            <input type='password' className='passwordBtn' />
-            <FontAwesomeIcon icon={faEye} className='eyes' />
+            <input type='text' className='passwordBtn' />
+          </div>
+          <label for='lname' className='registerRFormL'>
+            Email
+          </label>
+          <div className='inputPass'>
+            <input type='email' className='passwordBtn' />
+          </div>
+
+          <div className='user'>
+            <div className='userL'>
+              <label for='lname' className='registerRFormL'>
+                Password
+              </label>
+              <div className='userDivider'>
+                <input type='password' className='passwordBtn' />
+                <FontAwesomeIcon icon={faEye} className='eyes' />
+              </div>
+            </div>
+            <div className='userR'>
+              <label for='lname' className='registerRFormL'>
+                Confirm Password
+              </label>
+              <div className='userDivider'>
+                <input type='password' className='passwordBtn' />
+                <FontAwesomeIcon icon={faEye} className='eyes' />
+              </div>
+            </div>
           </div>
         </form>
         <div className='forgetP'>
@@ -36,15 +78,13 @@ const Register = () => {
           </p>
           <div className='rememberMe'>
             <p className='rememeberMeText'>Remember Me</p>
-            <div className='rememberMeCB'>
-              <RememberMe onChange={(e) => setRememberMe(e.target.checked)} />
-            </div>
+            <div className='rememberMeCB'>check box</div>
           </div>
         </div>
-        <div className='signInSocial'>
-          <button className='signInSocialS'>SIGN IN</button>
-          <span className='signInSocialOr'>OR</span>
-          <button className='signInSocialG'>
+        <div className='registerSignInSocial'>
+          <button className='registerSignInBtn'>SIGN IN</button>
+          <span className='registerSignInSocialOr'>OR</span>
+          <button className='registerSignInSocialG'>
             <span className='g'>G</span>
             <span className='o1'>O</span>
             <span className='o2'>O</span>
@@ -52,11 +92,7 @@ const Register = () => {
             <span className='o2'>L</span>
             <span className='o1'>E</span>
           </button>
-          <button className='signInSocialF'>FACEBOOK</button>
-        </div>
-        <div className='signInB'>
-          <p className='signInP'>Already have an account?</p>
-          <button className='signInBtn'>SIGN UP</button>
+          <button className='registerSignInSocialF'>FACEBOOK</button>
         </div>
       </div>
     </div>
