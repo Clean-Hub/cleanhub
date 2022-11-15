@@ -125,25 +125,33 @@
   color: #c4c4c4;
   cursor: pointer;
 }
-.forgetP {
+.registerTerms {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
-.forgetPw {
+.registerTermsP {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 140%;
-  letter-spacing: 0.05em;
   color: #000000;
 }
-.reset {
+.registerTermsSp {
   color: #2ba84a;
   cursor: pointer;
 }
+.registerTermsCheck {
+  width: 25px;
+  height: 25px;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
 .rememberMe {
   display: flex;
   align-items: center;

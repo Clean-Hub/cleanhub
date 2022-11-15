@@ -75,14 +75,13 @@ const Register = () => {
             </div>
           </div>
         </form>
-        <div className='forgetP'>
-          <p className='forgetPw'>
-            Forget Password? <span className='reset'>Reset Password</span>
+        <div className='registerTerms'>
+          <input type='checkbox' className='registerTermsCheck' />
+          <p className='registerTermsP'>
+            I agree to Cleanhub’s
+            <span className='registerTermsSp'> Terms of Condition</span> and
+            <span className='registerTermsSp'> Privacy Policy</span>
           </p>
-          <div className='rememberMe'>
-            <p className='rememeberMeText'>Remember Me</p>
-            <div className='rememberMeCB'>check box</div>
-          </div>
         </div>
         <div className='registerSignInSocial'>
           <button className='registerSignInBtn'>SIGN UP</button>
