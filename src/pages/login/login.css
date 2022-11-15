@@ -61,7 +61,7 @@
 .loginRFormInput:focus {
   outline: none;
 }
-.inputPass {
+.inputPassLogin {
   width: 100%;
   display: flex;
   align-items: center;

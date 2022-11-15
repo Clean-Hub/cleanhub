@@ -26,7 +26,7 @@ const Login = () => {
           <label for='lname' className='loginRFormL'>
             Password
           </label>
-          <div className='inputPass'>
+          <div className='inputPassLogin'>
             <input type='password' className='passwordBtn' />
             <FontAwesomeIcon icon={faEye} className='eyes' />
           </div>

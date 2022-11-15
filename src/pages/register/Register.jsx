@@ -11,7 +11,7 @@ const Register = () => {
         <img src={logo} alt='logo' className='registerLogo' />
         <div className='registerSignInB'>
           <p className='registerSignInP'>Already have an account?</p>
-          <Link to='/'>
+          <Link to='/login'>
             <button className='registerSignInSocialS'>SIGN IN</button>
           </Link>
         </div>
