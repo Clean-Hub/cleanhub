@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to='/'>HOME</Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='#'>ABOUT US</Link>
+            <Link to='/about'>ABOUT US</Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#'>HOW IT WORKS</Link>
