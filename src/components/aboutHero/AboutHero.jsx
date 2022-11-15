@@ -1,7 +1,7 @@
 import './aboutHero.css'
 
 const AboutHero = () => {
-  return <div>AboutHero</div>
+  return <div className='aboutHeroContainer'>AboutHero</div>
 }
 
 export default AboutHero
