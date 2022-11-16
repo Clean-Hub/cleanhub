@@ -1,7 +1,7 @@
 import './aboutHero.css'
 import { sliderImg } from '../../demoData'
 import BtnSlider from '../btnSlider/BtnSlider'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const AboutHero = () => {
   const [slideIndex, setSlideIndex] = useState(1)
@@ -23,6 +23,25 @@ const AboutHero = () => {
   const moveDot = (index) => {
     setSlideIndex(index)
   }
+
+  useEffect(() => {
+    const lastIndex = sliderImg.length
+    if (slideIndex < 0) {
+      setSlideIndex(lastIndex)
+    }
+    if (slideIndex > lastIndex) {
+      setSlideIndex(1)
+    }
+  }, [slideIndex])
+
+  // This part is used for slide intervals
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setSlideIndex(slideIndex + 1)
+    }, 3000)
+    return () => clearInterval(slider)
+  }, [slideIndex])
+
   return (
     <div className='container-slider'>
       {sliderImg.map((obj, index) => {
