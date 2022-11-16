@@ -24,12 +24,12 @@
 }
 .aboutServiceCardL {
   flex: 1;
-  /* margin-left: 150px;
-  margin-right: 50px; */
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .aboutServiceCardR {
   flex: 1;
-  /* margin-left: 50px;
-  margin-right: 150px; */
+  margin-left: 50px;
+  margin-right: 90px;
 }

@@ -5,8 +5,9 @@
   align-items: center;
 }
 .aboutServicesCardImg {
-  width: 71px;
-  height: 143px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .aboutServicesCardL {
