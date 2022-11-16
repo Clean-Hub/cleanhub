@@ -9,12 +9,15 @@ import {
 import logo from '../../assets/img/footerlogo.png'
 import { faHouse, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='footerContainer'>
       <div className='footerT'>
         <div className='footerTL'>
-          <img src={logo} alt='logo' className='footerLogo' />
+          <Link to='/'>
+            <img src={logo} alt='logo' className='footerLogo' />
+          </Link>
 
           <p className='footerText'>SUBSCRIBE TO OUR NEWSLETTER</p>
           <div className='footerSubscribe'>
@@ -30,7 +33,9 @@ const Footer = () => {
           <div className=''>
             <h4 className='footerH'>ABOUT US</h4>
             <ul className='footerUl'>
-              <li className='footerUi'>Who we are</li>
+              <Link to='/about/aboutUs'>
+                <li className='footerUi'>Who we are</li>
+              </Link>
               <li className='footerUi'>Our Mission</li>
               <li className='footerUi'>Services</li>
               <li className='footerUi'>Our Projects</li>

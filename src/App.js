@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import About from './pages/about/About'
+import AboutIntro from './components/aboutIntro/AboutIntro'
 function App() {
   return (
     <div className='appContainer'>
@@ -15,7 +16,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<About />}>
+            <Route path='/about/aboutUs' element={<AboutIntro />} />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
