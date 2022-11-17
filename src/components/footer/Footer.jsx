@@ -36,7 +36,9 @@ const Footer = () => {
               <Link to='/about/aboutUs'>
                 <li className='footerUi'>Who we are</li>
               </Link>
-              <li className='footerUi'>Our Mission</li>
+              <Link to='/about/service'>
+                <li className='footerUi'>Our Mission</li>
+              </Link>
               <li className='footerUi'>Services</li>
               <li className='footerUi'>Our Projects</li>
               <li className='footerUi'>Partnerships</li>

@@ -3,10 +3,7 @@ import logo from '../../assets/img/logo.png'
 import { Link, useLocation } from 'react-router-dom'
 const Navbar = () => {
   const { pathname } = useLocation()
-  // console.log('pathname', pathname.split('/')[1])
   const url = pathname.split('/')[1]
-  // const url = login
-  console.log('url', url)
   return (
     <div className='navbarContainer'>
       <div className='navbarLeft'>

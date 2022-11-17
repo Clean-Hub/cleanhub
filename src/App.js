@@ -7,20 +7,25 @@ import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import About from './pages/about/About'
 import AboutIntro from './components/aboutIntro/AboutIntro'
+import ScrollToTop from './components/scrollToTip/ScrollToTop'
+import AboutServices from './components/aboutServices/AboutServices'
 function App() {
   return (
     <div className='appContainer'>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/about' element={<About />}>
-            <Route path='/about/aboutUs' element={<AboutIntro />} />
-          </Route>
-        </Routes>
-        <Footer />
+        <ScrollToTop>
+          <Navbar />
+          {/* <Routes> */}
+          {/* <Route path='/' element={<Home />} /> */}
+          {/* <Route path='/login' element={<Login />} /> */}
+          {/* <Route path='/register' element={<Register />} /> */}
+          {/* <Route path='/about' element={<About />}> */}
+          {/* <Route path='/about/aboutUs' element={<AboutIntro />} /> */}
+          {/* <Route path='/about/service' element={<AboutServices />} /> */}
+          {/* </Route> */}
+          {/* </Routes> */}
+          {/* <Footer /> */}
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   )
