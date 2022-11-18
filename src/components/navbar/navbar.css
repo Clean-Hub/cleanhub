@@ -1,8 +1,8 @@
-.navbarContainer {
+/* .navbarContainer {
   display: flex;
   padding-top: 30px;
   width: 100%;
-  /* z-index: 9999; */
+  background-color: #02230a;
 }
 .navbarLogo {
   width: 266px;
@@ -12,6 +12,9 @@
   flex: 1;
   padding-left: 50px;
   padding-right: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbarRight {
   flex: 3;
@@ -43,13 +46,99 @@
   padding-left: 20px;
   color: #02230a;
 }
+.icon {
+  display: none;
+}
+.navButton {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
 
-@media only screen and (max-width: 480px) {
-  .navbarLeft {
-    padding-left: 5px;
-    padding-right: 20px;
-  }
+  
+} */
+
+.max-wrapper {
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: rebeccapurple;
+}
+.max-wrapper-content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-bar {
+  display: none;
+}
+.icon {
+  font-size: 30px;
+}
+
+.navbarUl {
+  display: flex;
+  list-style: none;
+}
+.navbarUl li:not(:last-child) {
+  margin-right: 20px;
+}
+.navbarLi1 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 26px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.navbarLi2 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 26px;
+  cursor: pointer;
+  color: #02230a;
+}
+.navbarLogo {
+  width: 266px;
+  cursor: pointer;
+}
+.navbarRight {
+  /* height: 100px; */
+}
+
+@media screen and (max-width: 900px) {
   .navbarRight {
-    display: none;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.228);
+    transition: 250ms ease;
+  }
+  .menu-bar {
+    display: block;
+  }
+  .nav-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbarUl {
+    display: block;
+    list-style: none;
+  }
+  .navbarUl li {
+    padding: 10px;
   }
 }
