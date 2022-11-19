@@ -15,12 +15,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-right: 30px;
   margin-bottom: 80px;
 }
 .footerLogo {
-  padding-right: 130px;
-  margin-left: 10px;
+  margin-right: 170px;
   cursor: pointer;
 }
 .footerText {
@@ -31,13 +30,12 @@
   line-height: 22px;
   color: #ffffff;
   padding-bottom: 20px;
-  padding-right: 40px;
   padding-top: 20px;
-  margin-left: 10px;
+  margin-right: 90px;
 }
 .footerSubscribe {
   display: flex;
-  padding-left: 100px;
+  margin-left: 50px;
 }
 .footerSubscribeInput {
   background: #ffffff;
@@ -78,6 +76,10 @@
   flex: 2;
   display: flex;
   justify-content: space-evenly;
+  margin-right: 30px;
+}
+.footerTRSocial {
+  margin-left: 40px;
 }
 .footerH {
   font-family: 'Nunito';
@@ -149,11 +151,11 @@
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .footerBConnectSpan {
-  width: 512px;
+  width: 400px;
   height: 0px;
   border: 1px solid #ffffff36;
 }
@@ -194,4 +196,49 @@
   color: #ffffff;
   font-size: 30px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .footerT {
+    display: flex;
+    flex-direction: column;
+  }
+  .footerTL {
+    margin-left: 0px;
+    margin-bottom: 80px;
+  }
+  .footerLogo {
+    padding: 0;
+  }
+  .footerText {
+    padding: 0;
+  }
+  .footerSubscribe {
+    padding: 0;
+  }
+  .footerBConnectH {
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footerBConnectSpan {
+    width: 100px;
+  }
+  .footerBSocialLUl {
+    padding: 0;
+  }
+  .footerBSocialLUl {
+    padding: 0;
+  }
+  .footerBSocialRUl {
+    padding-left: 60px;
+  }
+  .footerBSocialLLi {
+    padding-left: 10px;
+  }
 }

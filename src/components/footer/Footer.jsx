@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='footerTR'>
-          <div className=''>
+          <div className='footerTRSocial'>
             <h4 className='footerH'>ABOUT US</h4>
             <ul className='footerUl'>
               <Link to='/about/aboutUs'>
@@ -44,7 +44,8 @@ const Footer = () => {
               <li className='footerUi'>Partnerships</li>
             </ul>
           </div>
-          <div className=''>
+
+          <div className='footerTRSocial'>
             <h4 className='footerH'>RESOURCES</h4>
             <ul className='footerUl'>
               <li className='footerUi'>Careers</li>
@@ -54,7 +55,7 @@ const Footer = () => {
               <li className='footerUi'>FAQS</li>
             </ul>
           </div>
-          <div className=''>
+          <div className='footerTRSocial'>
             <h4 className='footerH contact'>CONTACT US</h4>
             <div className='house'>
               <FontAwesomeIcon icon={faHouse} className='iconF' />
