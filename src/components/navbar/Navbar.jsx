@@ -36,19 +36,29 @@ const Navbar = () => {
       <div className={open ? 'navbarRight active' : 'navbarRight'}>
         <ul className='navbarUl'>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='/'>HOME</Link>
+            <Link to='/' onClick={closeMenu}>
+              HOME
+            </Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='/about'>ABOUT US</Link>
+            <Link to='/about' onClick={closeMenu}>
+              ABOUT US
+            </Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='#'>HOW IT WORKS</Link>
+            <Link to='#' onClick={closeMenu}>
+              HOW IT WORKS
+            </Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='#'>CONTACT</Link>
+            <Link to='#' onClick={closeMenu}>
+              CONTACT
+            </Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-            <Link to='#'>BLOG</Link>
+            <Link to='#' onClick={closeMenu}>
+              BLOG
+            </Link>
           </li>
         </ul>
       </div>
