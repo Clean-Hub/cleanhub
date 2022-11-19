@@ -1,71 +1,57 @@
 import './navbar.css'
 import logo from '../../assets/img/logo.png'
 import { Link, useLocation } from 'react-router-dom'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-
-import { useRef } from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
 
 const Navbar = () => {
   const { pathname } = useLocation()
   const url = pathname.split('/')[1]
-  const [showLink, setShowLink] = useState(false)
-  const menuOpen = useRef()
-  const ulRef = useRef()
 
-  const toggleMenu = () => {
-    setShowLink(!showLink)
-    console.log('hi')
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(!open)
   }
-  useEffect(() => {
-    const lenghtHeight = menuOpen.current.getBoundingClientRect().height
-    console.log(lenghtHeight)
-    if (showLink) {
-      ulRef.current.style.height = `${lenghtHeight}px`
-    } else {
-      ulRef.current.style.height = '0px'
-    }
-  }, [showLink])
+
+  const closeMenu = () => {
+    setOpen(false)
+  }
+
   return (
-    <div className='max-wrapper'>
-      <nav className='max-wrapper-content nav'>
-        <div className='nav-header'>
-          <div className='nav-logo'>
-            <Link to='/'>
-              <img src={logo} alt='logo' className='navbarLogo' />
-            </Link>
-          </div>
-          <div className='menu-bar' onClick={toggleMenu}>
-            {!showLink ? (
-              <FontAwesomeIcon icon={faBars} className='icon' />
-            ) : (
-              <FontAwesomeIcon icon={faXmark} className='icon' />
-            )}
-          </div>
+    <div className='navbarContainer'>
+      <div className='navbarLeft'>
+        <Link to='/'>
+          <img src={logo} alt='logo' className='navbarLogo' />
+        </Link>
+        <div onClick={handleClick} className='icon'>
+          {!open ? (
+            <FontAwesomeIcon icon={faBars} />
+          ) : (
+            <FontAwesomeIcon icon={faXmark} />
+          )}
         </div>
-        <div className='navbarRight' ref={ulRef}>
-          <ul className='navbarUl' ref={menuOpen}>
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='/'>HOME</Link>
-            </li>
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='/about'>ABOUT US</Link>
-            </li>
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='#'>HOW IT WORKS</Link>
-            </li>
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='#'>CONTACT</Link>
-            </li>
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='#'>BLOG</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      </div>
+      <div className={open ? 'navbarRight active' : 'navbarRight'}>
+        <ul className='navbarUl'>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='/'>HOME</Link>
+          </li>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='/about'>ABOUT US</Link>
+          </li>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='#'>HOW IT WORKS</Link>
+          </li>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='#'>CONTACT</Link>
+          </li>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='#'>BLOG</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

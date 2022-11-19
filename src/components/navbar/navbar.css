@@ -1,31 +1,27 @@
-.max-wrapper {
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: rebeccapurple;
+.navbarContainer {
+  display: flex;
+  padding-top: 30px;
+  width: 100%;
+  max-width: 1170px;
 }
-.max-wrapper-content {
-  width: 95%;
-  margin: 0 auto;
+.navbarLogo {
+  width: 266px;
+  cursor: pointer;
 }
-
-.nav {
+.navbarLeft {
+  flex: 1;
+  padding-left: 50px;
+  padding-right: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.menu-bar {
-  display: none;
+.navbarRight {
+  flex: 3;
+  padding-top: 15px;
 }
-.icon {
-  font-size: 30px;
-}
-
 .navbarUl {
   display: flex;
   list-style: none;
-}
-.navbarUl li:not(:last-child) {
-  margin-right: 20px;
 }
 .navbarLi1 {
   font-family: 'Nunito';
@@ -34,6 +30,7 @@
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
+  padding-left: 20px;
   color: #ffffff;
 }
 
@@ -44,41 +41,53 @@
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
+  padding-left: 20px;
   color: #02230a;
 }
-.navbarLogo {
-  width: 266px;
+
+.icon {
+  font-size: 30px;
+  color: white;
+  display: none;
   cursor: pointer;
 }
-.navbarRight {
-  /* height: 100px; */
-}
 
-@media screen and (max-width: 900px) {
-  .navbarRight {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 128, 0, 0.228);
-    transition: 250ms ease;
+@media only screen and (max-width: 900px) {
+  .navbarContainer {
+    position: relative;
   }
-  .menu-bar {
-    display: block;
-  }
-  .nav-header {
-    width: 100%;
+  .navbarLeft {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbarRight {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 90px;
+    left: -100%;
+    transition: all 0.6s linear;
+  }
+  .active {
+    /* background-color: white; */
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
+    left: 0;
   }
   .navbarUl {
-    display: block;
-    list-style: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
   }
-  .navbarUl li {
+  .navbarLi1,
+  .navbarLi2 {
     padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .icon {
+    display: flex;
+    color: #02230a;
   }
 }
