@@ -15,15 +15,15 @@ function App() {
       <BrowserRouter>
         <ScrollToTop>
           <Navbar />
-          {/* <Routes> */}
-          {/* <Route path='/' element={<Home />} /> */}
-          {/* <Route path='/login' element={<Login />} /> */}
-          {/* <Route path='/register' element={<Register />} /> */}
-          {/* <Route path='/about' element={<About />}> */}
-          {/* <Route path='/about/aboutUs' element={<AboutIntro />} /> */}
-          {/* <Route path='/about/service' element={<AboutServices />} /> */}
-          {/* </Route> */}
-          {/* </Routes> */}
+          <Routes>
+            {/* <Route path='/' element={<Home />} /> */}
+            {/* <Route path='/login' element={<Login />} /> */}
+            {/* <Route path='/register' element={<Register />} /> */}
+            {/* <Route path='/about' element={<About />}> */}
+            {/* <Route path='/about/aboutUs' element={<AboutIntro />} /> */}
+            {/* <Route path='/about/service' element={<AboutServices />} /> */}
+            {/* </Route> */}
+          </Routes>
           <Footer />
         </ScrollToTop>
       </BrowserRouter>
