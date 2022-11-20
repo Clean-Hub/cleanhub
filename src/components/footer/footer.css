@@ -203,15 +203,22 @@
     display: flex;
     flex-direction: column;
     height: 550px;
-    /* height: 100vh; */
+    flex-wrap: wrap;
   }
   .footerT {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .footerTL {
     margin-left: 0px;
     margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footerSubscribe {
+    display: flex;
+    flex-wrap: wrap;
   }
   .footerLogo {
     padding: 0;
