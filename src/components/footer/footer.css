@@ -211,6 +211,7 @@
     flex-wrap: wrap;
   }
   .footerTL {
+    /* look here */
     margin-left: 0px;
     margin-bottom: 80px;
     display: flex;
@@ -231,8 +232,8 @@
   }
   .footerBConnectH {
     padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .footerBConnectSpan {
     width: 100px;
@@ -248,5 +249,9 @@
   }
   .footerBSocialLLi {
     padding-left: 10px;
+  }
+  .footerTR {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
