@@ -203,6 +203,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: auto;
     flex-wrap: wrap;
     overflow: hidden;
   }
@@ -212,32 +213,27 @@
     flex-wrap: wrap;
   }
   .footerTL {
-    /* look here */
     margin-left: 0px;
-    margin-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    margin-right: 30px;
   }
   .footerSubscribe {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10px;
   }
   .footerLogo {
     padding: 0;
   }
   .footerText {
-    padding: 0;
+    padding: 2px;
+    padding-bottom: 15px;
   }
   .footerSubscribe {
     padding: 0;
-  }
-  .footerBConnectH {
-    padding: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .footerBConnectSpan {
-    /* width: 100px; */
+    margin-bottom: 30px;
   }
   .footerBSocialLUl {
     padding: 0;
@@ -254,5 +250,71 @@
   .footerTR {
     display: flex;
     flex-wrap: wrap;
+  }
+  .footerTRSocial {
+    margin: 0;
+  }
+  .footerUl {
+    padding-top: 10px;
+  }
+  .footerH {
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .footerUi {
+    padding-bottom: 15px;
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .footerB {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footerSubscribeInput {
+    padding: 10px 20px;
+  }
+
+  .footerH {
+    font-size: 16px;
+  }
+  .contact {
+    padding-left: 25px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .contact {
+    padding-top: 20px;
+    margin-left: 30px;
+  }
+  .footerBConnectSpan {
+    width: 100px;
+  }
+  .footerBConnectH {
+    font-size: 16px;
+    line-height: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footerBSocialLLi,
+  .footerBSocialLi {
+    font-size: 20px;
+  }
+  .footerBSocialLLi {
+    padding-left: 20px;
+  }
+  .iconF {
+    font-size: 15px;
+  }
+  .footerHC {
+    padding-left: 10px;
+  }
+  .footerTRSocial {
+    padding-left: 10px;
+  }
+  .house,
+  .phone,
+  .email {
+    margin-left: 50px;
   }
 }
