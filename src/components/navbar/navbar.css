@@ -1,8 +1,8 @@
 .navbarContainer {
+  margin: 0 auto;
   display: flex;
   padding-top: 30px;
   width: 100%;
-  max-width: 1170px;
 }
 .navbarLogo {
   width: 266px;
@@ -56,12 +56,13 @@
 @media only screen and (max-width: 900px) {
   .navbarContainer {
     position: relative;
+    width: 100%;
+    margin: 0 auto;
   }
   .navbarLeft {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 30px;
+    margin: 0 auto;
   }
   .navbarRight {
     position: absolute;
@@ -72,14 +73,13 @@
     transition: all 0.6s linear;
   }
   .active {
-    /* background-color: white; */
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
     left: 0;
+    text-align: center;
   }
   .navbarUl {
     flex-direction: column;
     text-align: center;
-    width: 100%;
   }
   .navbarLi1,
   .navbarLi2 {
@@ -91,5 +91,6 @@
   .icon {
     display: flex;
     color: #02230a;
+    margin: 0 auto;
   }
 }

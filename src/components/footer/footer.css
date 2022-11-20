@@ -202,7 +202,8 @@
   .footerContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 550px;
+    /* height: 100vh; */
   }
   .footerT {
     display: flex;
