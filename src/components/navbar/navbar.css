@@ -58,11 +58,21 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    background-color: red;
   }
   .navbarLeft {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    padding-left: 30px;
+    flex: 0;
+  }
+  .icon {
+    display: flex;
+    color: #02230a;
     margin: 0 auto;
+    margin-top: 20px;
   }
   .navbarRight {
     position: absolute;
@@ -86,11 +96,5 @@
     padding: 10px;
     margin-bottom: 20px;
     color: black;
-  }
-
-  .icon {
-    display: flex;
-    color: #02230a;
-    margin: 0 auto;
   }
 }

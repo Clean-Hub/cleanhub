@@ -25,13 +25,6 @@ const Navbar = () => {
         <Link to='/'>
           <img src={logo} alt='logo' className='navbarLogo' />
         </Link>
-        <div onClick={handleClick} className='icon'>
-          {!open ? (
-            <FontAwesomeIcon icon={faBars} />
-          ) : (
-            <FontAwesomeIcon icon={faXmark} />
-          )}
-        </div>
       </div>
       <div className={open ? 'navbarRight active' : 'navbarRight'}>
         <ul className='navbarUl'>
@@ -61,6 +54,13 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+      </div>
+      <div onClick={handleClick} className='icon'>
+        {!open ? (
+          <FontAwesomeIcon icon={faBars} />
+        ) : (
+          <FontAwesomeIcon icon={faXmark} />
+        )}
       </div>
     </div>
   )
