@@ -198,12 +198,13 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .footerContainer {
     display: flex;
     flex-direction: column;
     height: 100vh;
     flex-wrap: wrap;
+    overflow: hidden;
   }
   .footerT {
     display: flex;
@@ -236,7 +237,7 @@
     padding-right: 5px;
   }
   .footerBConnectSpan {
-    width: 100px;
+    /* width: 100px; */
   }
   .footerBSocialLUl {
     padding: 0;
