@@ -198,7 +198,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 480px) {
   .footerContainer {
     display: flex;
     flex-direction: column;
