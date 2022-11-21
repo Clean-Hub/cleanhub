@@ -16,7 +16,7 @@ function App() {
         <ScrollToTop>
           {/* <Navbar /> */}
           <Routes>
-            {/* <Route path='/' element={<Home />} /> */}
+            <Route path='/' element={<Home />} />
             {/* <Route path='/login' element={<Login />} /> */}
             {/* <Route path='/register' element={<Register />} /> */}
             {/* <Route path='/about' element={<About />}> */}
@@ -24,7 +24,7 @@ function App() {
             {/* <Route path='/about/service' element={<AboutServices />} /> */}
             {/* </Route> */}
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </ScrollToTop>
       </BrowserRouter>
     </div>

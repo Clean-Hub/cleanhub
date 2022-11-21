@@ -6,7 +6,7 @@ import HomeRecycling from '../../components/homeRecycling/HomeRecycling'
 const Home = () => {
   return (
     <div className='homeContainer'>
-      {/* <HomeHero /> */}
+      <HomeHero />
       {/* <HomeIntro /> */}
       {/* <HomeRecycling /> */}
     </div>
