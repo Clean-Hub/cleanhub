@@ -14,7 +14,7 @@ const Howitworks = () => {
           <div className='howitworks-title'>
             <h2 className='heading-sm'>HOW IT WORKS</h2>
             <h1 className='heading-lg'>
-              Make some cash from recycling that trash - Learn how it works{' '}
+              Make some cash from recycling that trash - Learn how it works
             </h1>
           </div>
           <div className='howitworks-content'>
