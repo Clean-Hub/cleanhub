@@ -1,31 +1,8 @@
-import dropOff from './assets/img/drop-off.png'
-import cashRedemption from './assets/img/cash-redemption.png'
-import earnPoints from './assets/img/earn-points.png'
-import pickUp from './assets/img/pick-up.png'
 import waste1 from './assets/img/waste1.png'
 import waste2 from './assets/img/waste2.jpg'
 import waste3 from './assets/img/waste3.jfif'
 import waste4 from './assets/img/waste4.jpg'
 import waste5 from './assets/img/waste5.jpg'
-
-const logo = [
-  {
-    photo: pickUp,
-    name: 'PICK-UP',
-  },
-  {
-    photo: dropOff,
-    name: 'DROP-OFF',
-  },
-  {
-    photo: earnPoints,
-    name: 'EARN POINTS',
-  },
-  {
-    photo: cashRedemption,
-    name: 'CASH REDEMPTION',
-  },
-]
 
 export const sliderImg = [
   {
@@ -56,4 +33,3 @@ export const cardInfo = [
   `Earn KLIN points everytime you donate trash`,
   `Get up to 100 KLIN points within 2 months and have your points converted to a cash or gift price, ready for redemption `,
 ]
-export default logo

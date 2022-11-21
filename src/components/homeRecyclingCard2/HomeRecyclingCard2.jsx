@@ -1,13 +1,13 @@
-import 'homeRecyclingCard2.css'
+import './homeRecyclingCard2.css'
 
-const Card = ({ img, title, content }) => {
+const HomeRecyclingCard2 = ({ img, title, content }) => {
   return (
-    <div className='card'>
+    <div className='homeRecyclingCardContainer'>
       <img src={img} alt='card-img' />
       <p>{title}</p>
-      <div className='card-content'>{content}</div>
+      <div className='homeRecyclingCardContent'>{content}</div>
     </div>
   )
 }
 
-export default Card
+export default HomeRecyclingCard2

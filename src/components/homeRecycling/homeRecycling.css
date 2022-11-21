@@ -1,46 +1,15 @@
-.homeRecyclingContainer {
+.howitworks-wrapper {
+  margin-top: 10rem;
+}
+.howitworks-wrapper .howitworks-title {
+  padding-bottom: 3rem;
+}
+.howitworks-wrapper .howitworks-title h1 {
+  max-width: 65rem;
+  width: 100%;
+}
+.howitworks-wrapper .howitworks-content {
   display: flex;
-  flex-direction: column;
-  margin: 90px;
-  height: 100vh;
-}
-.homeRecyclingInfoH2 {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: 0.03em;
-  color: #000000;
-  padding-bottom: 30px;
-}
-.homeRecyclingInfoP {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 56px;
-  color: #000000;
-  padding-right: 500px;
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width: 480px) {
-  .homeRecyclingContainer {
-    margin: 0 auto;
-    overflow: hidden;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .homeRecyclingInfoH2 {
-    padding-top: 60px;
-    text-align: center;
-  }
-  .homeRecyclingInfoP {
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 10px;
-  }
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
