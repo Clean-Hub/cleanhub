@@ -1,5 +1,5 @@
-import HomeRecyclingCard from '../homeRecyclingCard/HomeRecyclingCard'
-import RecyclingLogo from '../recyclingLogo/RecyclingLogo'
+// import HomeRecyclingCard from '../homeRecyclingCard/HomeRecyclingCard'
+// import RecyclingLogo from '../recyclingLogo/RecyclingLogo'
 import './homeRecycling.css'
 
 const HomeRecycling = () => {
@@ -11,8 +11,8 @@ const HomeRecycling = () => {
           Make some cash from recycling that trash - Learn how it works
         </p>
       </div>
-      <RecyclingLogo />
-      <HomeRecyclingCard />
+      {/* <RecyclingLogo /> */}
+      {/* <HomeRecyclingCard /> */}
     </div>
   )
 }

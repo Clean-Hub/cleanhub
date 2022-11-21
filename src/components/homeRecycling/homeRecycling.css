@@ -24,3 +24,23 @@
   padding-right: 500px;
   padding-bottom: 30px;
 }
+
+@media only screen and (max-width: 480px) {
+  .homeRecyclingContainer {
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .homeRecyclingInfoH2 {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .homeRecyclingInfoP {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+  }
+}

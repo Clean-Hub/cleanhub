@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className='homeContainer'>
       {/* <HomeHero /> */}
-      <HomeIntro />
-      {/* <HomeRecycling /> */}
+      {/* <HomeIntro /> */}
+      <HomeRecycling />
     </div>
   )
 }
