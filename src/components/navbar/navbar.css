@@ -58,6 +58,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    z-index: 999;
   }
   .navbarLeft {
     display: flex;
@@ -84,7 +85,6 @@
   }
   .active {
     left: 0;
-    /* background-color: green; */
   }
   .navbarUl {
     flex-direction: column;
@@ -96,7 +96,6 @@
     padding: 10px;
     margin-bottom: 20px;
     font-size: 25px;
-    z-index: 999;
     cursor: pointer;
   }
 
