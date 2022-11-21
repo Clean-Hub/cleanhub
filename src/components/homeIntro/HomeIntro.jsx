@@ -5,7 +5,7 @@ const HomeIntro = () => {
   return (
     <div className='homeIntroContainer'>
       <div className='homeIntroL'>
-        <img src={circle} alt='homeIntroLImg' />
+        <img src={circle} alt='homeIntroLImg' className='homeIntroLImg' />
       </div>
       <div className='homeIntroR'>
         <div className='homeIntroH2'>WHO WE ARE</div>

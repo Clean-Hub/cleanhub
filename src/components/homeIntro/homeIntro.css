@@ -59,6 +59,8 @@
   padding-bottom: 30px;
 }
 .homeIntroBtn {
+  width: 164px;
+  height: 48px;
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
@@ -71,7 +73,50 @@
   border-radius: 8px;
   border: none;
   padding: 10px;
-  margin-left: 180px;
-  margin-right: 180px;
+  margin-left: 80px;
+  margin-right: 80px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .homeIntroContainer {
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .homeIntroL {
+    /* display: none; */
+    margin: 0 auto;
+  }
+  .homeIntroLImg {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+  }
+  .homeIntroH2 {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .homeIntroR {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  .homeIntroH1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .homeIntroP {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+  }
 }
