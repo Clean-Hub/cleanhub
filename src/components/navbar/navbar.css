@@ -75,13 +75,15 @@
     margin-top: 20px;
   }
   .navbarRight {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     display: block;
     width: 100%;
-    top: 90px;
+    height: 100vh;
+    top: 0px;
     left: -100%;
     transition: all 0.6s linear;
-    background-color: rgb(0, 0, 0);
+    background-color: white;
   }
   .active {
     left: 0;
@@ -97,9 +99,6 @@
     margin-bottom: 20px;
     font-size: 25px;
     cursor: pointer;
-  }
-
-  .navbarLi2 {
-    color: white;
+    color: black;
   }
 }
