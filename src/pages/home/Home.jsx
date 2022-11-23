@@ -8,10 +8,10 @@ import Partners from '../../components/partners/Partners'
 const Home = () => {
   return (
     <div className='homeContainer'>
-      {/* <HomeHero /> */}
-      {/* <HomeIntro /> */}
-      {/* <HomeRecycling /> */}
-      {/* <HomeRecycInfo /> */}
+      <HomeHero />
+      <HomeIntro />
+      <HomeRecycling />
+      <HomeRecycInfo />
       <Partners />
     </div>
   )

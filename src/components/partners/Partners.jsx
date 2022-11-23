@@ -11,33 +11,12 @@ import p5 from '../../assets/img/p5.png'
 import p6 from '../../assets/img/p6.png'
 
 const Partners = () => {
-  var settings = {
-    dots: false,
+  const settings = {
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
   }
 
   return (
@@ -47,32 +26,32 @@ const Partners = () => {
         <Slider {...settings} className='partners-slider'>
           <div>
             <div className='partners-slider-img'>
-              <img src={p1} alt='partners logo' />
+              <img src={p1} alt='partners logo' className='logo' />
             </div>
           </div>
           <div>
             <div className='partners-slider-img'>
-              <img src={p2} alt='partners logo' />
+              <img src={p2} alt='partners logo' className='logo' />
             </div>
           </div>
           <div>
             <div className='partners-slider-img'>
-              <img src={p3} alt='partners logo' />
+              <img src={p3} alt='partners logo' className='logo' />
             </div>
           </div>
           <div>
             <div className='partners-slider-img'>
-              <img src={p4} alt='partners logo' />
+              <img src={p4} alt='partners logo' className='logo' />
             </div>
           </div>
           <div>
             <div className='partners-slider-img'>
-              <img src={p5} alt='partners logo' />
+              <img src={p5} alt='partners logo' className='logo' />
             </div>
           </div>
           <div>
             <div className='partners-slider-img'>
-              <img src={p6} alt='partners logo' />
+              <img src={p6} alt='partners logo' className='logo' />
             </div>
           </div>
         </Slider>
