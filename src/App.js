@@ -14,7 +14,7 @@ function App() {
     <div className='appContainer'>
       <BrowserRouter>
         <ScrollToTop>
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
             <Route path='/' element={<Home />} />
             {/* <Route path='/login' element={<Login />} /> */}
@@ -24,7 +24,7 @@ function App() {
             {/* <Route path='/about/service' element={<AboutServices />} /> */}
             {/* </Route> */}
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </ScrollToTop>
       </BrowserRouter>
     </div>
