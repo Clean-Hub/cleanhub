@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   margin-bottom: 0.1rem;
+  margin-right: 50px;
 }
 .partners-slider {
   margin: 0 auto;
