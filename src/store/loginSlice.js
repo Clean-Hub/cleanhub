@@ -5,7 +5,7 @@ const loginSlice = createSlice({
   initialState: {
     email: '',
     password: '',
-    forgetPassword: '',
+    resetPassword: '',
     rememberMe: false,
   },
 
@@ -13,7 +13,7 @@ const loginSlice = createSlice({
     login: (state, action) => {
       state.email = action.payload.email
       state.password = action.payload.password
-      state.forgetPassword = action.payload.forgetPassword
+      state.resetPassword = action.payload.resetPassword
       state.rememberMe = action.payload.rememberMe
     },
   },

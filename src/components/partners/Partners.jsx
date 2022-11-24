@@ -12,7 +12,7 @@ import p6 from '../../assets/img/p6.png'
 
 const Partners = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
