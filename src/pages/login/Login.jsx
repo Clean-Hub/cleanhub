@@ -5,9 +5,13 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
+  const state = useSelector((state) => state)
+  console.log('state', state)
+
   return (
     <div className='loginContainer'>
       <div className='loginL'>
@@ -19,11 +23,11 @@ const Login = () => {
           <span className='loginRHInfoSp'></span>
         </div>
         <form action='' className='loginRForm'>
-          <label for='fname' className='loginRFormL'>
+          <label htmlFor='fname' className='loginRFormL'>
             Email
           </label>
           <input type='text' className='loginRFormInput' />
-          <label for='lname' className='loginRFormL'>
+          <label htmlFor='lname' className='loginRFormL'>
             Password
           </label>
           <div className='inputPassLogin'>
