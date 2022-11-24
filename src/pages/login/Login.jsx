@@ -1,7 +1,7 @@
 import './login.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-regular-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -13,48 +13,22 @@ import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
   const { login } = userSlice.actions
   const dispatch = useDispatch()
-  // console.log('login', login)
 
   const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,
   })
 
+  const showPasswordHandler = () => {
+    setShowPassword(!showPassword)
+  }
+
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
   }
-
-  // const handleClick = (e) => {
-  //   e.preventDefault()
-
-  //   const res = axiosInstance
-  //     .post('/login', credentials)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       dispatch(login({ ...data }))
-  //       console.log('data', data)
-  //       toast.success(data.success, {
-  //         position: toast.POSITION.TOP_RIGHT,
-  //       })
-  //     })
-  //     .catch((error) => {
-  //       toast.error(error.response.data.error, {
-  //         position: toast.POSITION.TOP_RIGHT,
-  //       })
-  //     })
-
-  // console.log('res', res)
-  // toast.success(res.data.success, {
-  //   position: toast.POSITION.TOP_RIGHT,
-  // })
-
-  // if (err.response.data.error) {
-  //   toast.error(err.response.data.error, {
-  //     position: toast.POSITION.TOP_RIGHT,
-  //   })
-  // }
 
   const handleClick = async (e) => {
     e.preventDefault()
@@ -65,9 +39,11 @@ const Login = () => {
       toast.success(res.data.success, {
         position: toast.POSITION.TOP_RIGHT,
       })
-    } catch (err) {
-      // console.log('err', err.response.data.error)
 
+      if (rememberMe) {
+        localStorage.setItem('token', res.data.token)
+      }
+    } catch (err) {
       toast.error(err.response.data.error, {
         position: toast.POSITION.TOP_RIGHT,
       })
@@ -101,12 +77,18 @@ const Login = () => {
           </label>
           <div className='inputPassLogin'>
             <input
-              type='password'
+              type={showPassword ? 'password' : 'text'}
               className='passwordBtn'
               id='password'
               onChange={handleChange}
             />
-            <FontAwesomeIcon icon={faEye} className='eyes' />
+            <span onClick={showPasswordHandler}>
+              {showPassword ? (
+                <FontAwesomeIcon icon={faEye} className='eyes' />
+              ) : (
+                <FontAwesomeIcon icon={faEyeSlash} className='eyes' />
+              )}
+            </span>
           </div>
         </form>
         <div className='forgetP'>

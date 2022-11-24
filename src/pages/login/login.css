@@ -236,7 +236,8 @@
     /* text-align: center; */
   }
   .loginRHInfoSp {
-    width: 50px;
+    width: 90px;
+    height: 1px;
   }
 
   .loginRForm {
@@ -265,6 +266,11 @@
   }
 
   .signInB {
-    display: none;
+    margin: 10px;
+    width: 90%;
+    gap: 6px;
+  }
+  .signInP {
+    font-size: 12px;
   }
 }
