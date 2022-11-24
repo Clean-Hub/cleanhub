@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import axiosInstance from '../../utils/axiosInstance'
 import userSlice from '../../store/userSlice'
@@ -16,6 +16,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
   const { login } = userSlice.actions
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const [credentials, setCredentials] = useState({
     username: undefined,
@@ -34,6 +35,7 @@ const Login = () => {
     e.preventDefault()
     try {
       const res = await axiosInstance.post('/login', credentials)
+      navigate('/')
       console.log('res', res)
       dispatch(login({ ...res.data }))
       toast.success(res.data.success, {
