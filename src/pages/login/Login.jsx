@@ -5,13 +5,35 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import axiosInstance from '../../utils/axiosInstance'
+import loginSlice from '../../store/userSlice'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
-  const state = useSelector((state) => state)
-  console.log('state', state)
+  const { login } = loginSlice.actions
+  const dispatch = useDispatch()
+  console.log('login', login)
 
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    password: undefined,
+  })
+
+  const handleChange = (e) => {
+    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+  }
+
+  const handleClick = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await axiosInstance.post('/login', credentials)
+      // console.log('res', res.data)
+      dispatch(login({ ...res.data }))
+    } catch (err) {
+      console.log('res', err.response.data)
+    }
+  }
   return (
     <div className='loginContainer'>
       <div className='loginL'>
@@ -26,12 +48,22 @@ const Login = () => {
           <label htmlFor='fname' className='loginRFormL'>
             Email
           </label>
-          <input type='text' className='loginRFormInput' />
+          <input
+            type='text'
+            className='loginRFormInput'
+            id='email'
+            onChange={handleChange}
+          />
           <label htmlFor='lname' className='loginRFormL'>
             Password
           </label>
           <div className='inputPassLogin'>
-            <input type='password' className='passwordBtn' />
+            <input
+              type='password'
+              className='passwordBtn'
+              id='password'
+              onChange={handleChange}
+            />
             <FontAwesomeIcon icon={faEye} className='eyes' />
           </div>
         </form>
@@ -47,7 +79,9 @@ const Login = () => {
           </div>
         </div>
         <div className='signInSocial'>
-          <button className='signInSocialS'>SIGN IN</button>
+          <button className='signInSocialS' onClick={handleClick}>
+            SIGN IN
+          </button>
           <span className='signInSocialOr'>OR</span>
           <button className='signInSocialG'>
             <span className='g'>G</span>

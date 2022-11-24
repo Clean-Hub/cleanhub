@@ -225,7 +225,11 @@
   }
 
   .loginR {
-    margin: 30px;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+  .loginRHInfo {
+    margin-left: 10px;
   }
   .loginRHInfoWelcome {
     font-size: 20px;
@@ -236,15 +240,24 @@
   }
 
   .loginRForm {
-    width: 72%;
+    width: 90%;
+    margin-left: 10px;
   }
   .forgetP {
-    width: 72%;
+    width: 100%;
   }
   .forgetPw {
-    /* font-size: 10px; */
+    margin-left: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
   }
-
+  .rememberMe {
+    margin-right: 20px;
+  }
+  .rememeberMeText {
+    font-size: 12px;
+  }
   .signInSocial {
     display: flex;
     flex-direction: column;
