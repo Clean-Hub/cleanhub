@@ -5,15 +5,17 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import axiosInstance from '../../utils/axiosInstance'
-import loginSlice from '../../store/userSlice'
+import userSlice from '../../store/userSlice'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
-  const { login } = loginSlice.actions
+  const { login } = userSlice.actions
   const dispatch = useDispatch()
-  console.log('login', login)
+  // console.log('login', login)
 
   const [credentials, setCredentials] = useState({
     username: undefined,
@@ -24,18 +26,58 @@ const Login = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
   }
 
+  // const handleClick = (e) => {
+  //   e.preventDefault()
+
+  //   const res = axiosInstance
+  //     .post('/login', credentials)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       dispatch(login({ ...data }))
+  //       console.log('data', data)
+  //       toast.success(data.success, {
+  //         position: toast.POSITION.TOP_RIGHT,
+  //       })
+  //     })
+  //     .catch((error) => {
+  //       toast.error(error.response.data.error, {
+  //         position: toast.POSITION.TOP_RIGHT,
+  //       })
+  //     })
+
+  // console.log('res', res)
+  // toast.success(res.data.success, {
+  //   position: toast.POSITION.TOP_RIGHT,
+  // })
+
+  // if (err.response.data.error) {
+  //   toast.error(err.response.data.error, {
+  //     position: toast.POSITION.TOP_RIGHT,
+  //   })
+  // }
+
   const handleClick = async (e) => {
     e.preventDefault()
     try {
       const res = await axiosInstance.post('/login', credentials)
-      // console.log('res', res.data)
+      console.log('res', res)
       dispatch(login({ ...res.data }))
+      toast.success(res.data.success, {
+        position: toast.POSITION.TOP_RIGHT,
+      })
     } catch (err) {
-      console.log('res', err.response.data)
+      // console.log('err', err.response.data.error)
+
+      toast.error(err.response.data.error, {
+        position: toast.POSITION.TOP_RIGHT,
+      })
     }
   }
+
   return (
     <div className='loginContainer'>
+      <ToastContainer />
+
       <div className='loginL'>
         <img src={logo} alt='logo' className='loginLogo' />
       </div>
