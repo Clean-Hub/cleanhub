@@ -85,7 +85,7 @@ const Login = () => {
               onChange={handleChange}
             />
             <span onClick={showPasswordHandler}>
-              {showPassword ? (
+              {!showPassword ? (
                 <FontAwesomeIcon icon={faEye} className='eyes' />
               ) : (
                 <FontAwesomeIcon icon={faEyeSlash} className='eyes' />
