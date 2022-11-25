@@ -2,7 +2,7 @@ import Navbar from './components/navbar/Navbar'
 // import './app.css'
 import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import About from './pages/about/About'
@@ -12,7 +12,7 @@ import AboutServices from './components/aboutServices/AboutServices'
 function App() {
   return (
     <div className='appContainer'>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop>
           <Navbar />
           <Routes>
@@ -26,7 +26,7 @@ function App() {
           </Routes>
           <Footer />
         </ScrollToTop>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
