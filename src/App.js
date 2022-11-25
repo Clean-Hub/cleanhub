@@ -24,7 +24,7 @@ function App() {
             {/* <Route path='/about/service' element={<AboutServices />} /> */}
             {/* </Route> */}
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     </div>
