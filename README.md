@@ -1,25 +1,48 @@
-# CLEAN HUB
+# Introduction
 
 Cleanhub is a Web application that helps people earn money while they dispose recyclable waste
 
+---
+
+# Cleanhub Front End
 
 https://cleanhub.netlify.app
 
-Team Members
+> You can visit the link to see how the front end was designed, the technology used for the front end is ReactJs
+
+---
+
+# Team Members
+
 Kabeer Akanni : Figma Designs plus backend
 Jamiu Ismail: Front-End
 
 Each member is more comfortable with the roles
 
-Technologies
+---
 
-Javascript
-React for frontend
-Node.js for backend
-Expressjs for backend server side
-Mongodb for the database
+# Technologies used
 
-Challenge statement
+- Javascript
+- Reactjs
+- css
+
+---
+
+# Packages/Dependencies used
+
+- react-router-dom
+- react-slick
+- slick-carousel
+- react-toastify
+- axios
+- react-redux
+- reduxjs/toolkit
+- fontawesome
+
+---
+
+# Challenge statement
 
 The problem the Portfolio Project is intended to solve is the following:
 To help users have an easier access to waste disposal systems in the state.
@@ -47,6 +70,8 @@ PSP
 Lagos waste management
 List any similar products or solutions that currently exist.
 For each item in the list, explain similarities and differences
+
+---
 
 ## Available Scripts
 
