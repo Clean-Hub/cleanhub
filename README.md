@@ -4,15 +4,15 @@ Cleanhub is a Web application that helps people earn money while they dispose re
 
 ---
 
-# Cleanhub Front End
+## Cleanhub Front End
 
-https://cleanhub.netlify.app
+<https://cleanhub.netlify.app>
 
 > You can visit the link to see how the front end was designed, the technology used for the front end is ReactJs
 
 ---
 
-# Team Members
+## Team Members
 
 Kabeer Akanni : Figma Designs plus backend
 Jamiu Ismail: Front-End
@@ -21,15 +21,15 @@ Each member is more comfortable with the roles
 
 ---
 
-# Technologies used
+## Technologies used
 
 - Javascript
 - Reactjs
-- css
+- CSS
 
 ---
 
-# Packages/Dependencies used
+## Packages/Dependencies used
 
 - react-router-dom
 - react-slick
@@ -42,7 +42,7 @@ Each member is more comfortable with the roles
 
 ---
 
-# Challenge statement
+## Challenge statement
 
 The problem the Portfolio Project is intended to solve is the following:
 To help users have an easier access to waste disposal systems in the state.
