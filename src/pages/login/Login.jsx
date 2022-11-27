@@ -79,13 +79,13 @@ const Login = () => {
           </label>
           <div className='inputPassLogin'>
             <input
-              type={showPassword ? 'password' : 'text'}
+              type={showPassword ? 'text' : 'password'}
               className='passwordBtn'
               id='password'
               onChange={handleChange}
             />
             <span onClick={showPasswordHandler}>
-              {!showPassword ? (
+              {showPassword ? (
                 <FontAwesomeIcon icon={faEye} className='eyes' />
               ) : (
                 <FontAwesomeIcon icon={faEyeSlash} className='eyes' />
