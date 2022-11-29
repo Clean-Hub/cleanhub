@@ -19,7 +19,7 @@ const Login = () => {
   const navigate = useNavigate()
 
   const [credentials, setCredentials] = useState({
-    username: undefined,
+    email: undefined,
     password: undefined,
   })
 

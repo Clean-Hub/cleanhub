@@ -55,10 +55,11 @@
 
 @media only screen and (max-width: 480px) {
   .navbarContainer {
-    position: relative;
+    position: fixed;
     width: 100%;
     margin: 0 auto;
     z-index: 999;
+    background-color: white;
   }
   .navbarLeft {
     display: flex;

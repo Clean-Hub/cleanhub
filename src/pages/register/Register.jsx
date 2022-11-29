@@ -1,10 +1,16 @@
 import './register.css'
+import { useState } from 'react'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 
 const Register = () => {
+  const [credentials, setCredentials] = useState({
+    username: undefined,
+    password: undefined,
+  })
+
   return (
     <div className='registerContainer'>
       <div className='registerL'>

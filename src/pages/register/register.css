@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 70px;
 }
 .registerL {
   flex: 1;
@@ -21,6 +22,7 @@
   align-items: center;
   justify-content: space-around;
   margin-left: 50px;
+  margin-top: 98px;
 }
 .registerSignInP {
   font-family: 'Nunito';
@@ -74,7 +76,7 @@
 .registerRHInfoSp {
   width: 156px;
   height: 0px;
-  border: 3px solid #2ba84a;
+  border: 3.2px solid #2ba84a;
   margin-top: 10px;
 }
 .registerRForm {
