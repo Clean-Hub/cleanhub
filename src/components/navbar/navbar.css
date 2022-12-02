@@ -16,9 +16,10 @@
   align-items: center;
 }
 .navbarRight {
+  width: 100%;
   flex: 3;
   padding-top: 15px;
-  padding-left: 80px;
+  padding-left: 300px;
 }
 .navbarUl {
   display: flex;
@@ -33,6 +34,7 @@
   cursor: pointer;
   padding-left: 13px;
   color: #ffffff;
+  padding-right: 15px;
 }
 
 .navbarLi2 {
@@ -85,6 +87,7 @@
     left: -100%;
     transition: all 0.6s linear;
     background-color: white;
+    padding: 0;
   }
 
   .active {
