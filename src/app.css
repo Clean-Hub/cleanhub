@@ -1,18 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
 .appContainer {
   width: 100%;
   position: relative;
   background-color: forestgreen;
-}
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-html,
-body {
-  scroll-behavior: smooth;
 }
