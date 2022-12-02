@@ -13,10 +13,12 @@ const HomeIntro = () => {
           Yes, we believe in a cleaner and healthy LAGOS!
         </div>
         <div className='homeIntroP'>
-         We provide end-to-end waste management services based on the principles of circular economy.
-         We handle waste sustainably & responsibly forLagosian, tech parks,residential communities 
-         and other bulk generating organizations and institutions. Are you a bulk waste generator? 
-         Connect with us to ensure that your brand becomes zero waste to landfill.
+          We provide end-to-end waste management services based on the
+          principles of circular economy. We handle waste sustainably &
+          responsibly for Lagosian, tech parks, residential communities and
+          other bulk generating organizations and institutions. Are you a bulk
+          waste generator? Connect with us to ensure that your brand becomes
+          zero waste to landfill.
         </div>
         <button className='homeIntroBtn'>LEARN MORE</button>
       </div>
