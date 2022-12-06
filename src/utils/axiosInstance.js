@@ -3,8 +3,8 @@ import axios from 'axios'
 let headers = {}
 
 const axiosInstance = axios.create({
-  baseURL: 'https://cleanhubserver.herokuapp.com/',
-  // baseURL: 'http://localhost:8800/api/auth',
+  // baseURL: 'https://cleanhubserver.herokuapp.com/',
+  baseURL: 'http://localhost:8800/api/auth',
   headers,
 })
 

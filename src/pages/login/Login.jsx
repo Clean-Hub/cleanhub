@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import axiosInstance from '../../utils/axiosInstance'
-import userSlice from '../../store/userSlice'
+import userSlice from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
