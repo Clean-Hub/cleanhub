@@ -73,7 +73,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <label htmlFor='lname' className='registerRFormL'>
+          <label htmlFor='lname' className='registerRFormL mail'>
             Phone
           </label>
           <div className='inputPass'>
@@ -84,7 +84,7 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <label htmlFor='lname' className='registerRFormL'>
+          <label htmlFor='lname' className='registerRFormL mail'>
             Email
           </label>
           <div className='inputPass'>
@@ -112,10 +112,10 @@ const Register = () => {
               </div>
             </div>
             <div className='userR'>
-              <label htmlFor='lname' className='registerRFormL'>
+              <label htmlFor='lname' className='registerRFormL cf'>
                 Confirm Password
               </label>
-              <div className='userDivider'>
+              <div className='userDivider cf2'>
                 <input
                   type='password'
                   className='passwordBtn'
