@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axiosInstance from '../utils/axiosInstance'
+import jwtDecode from 'jwt-decode'
 
 const initialState = {
   token: localStorage.getItem('token'),
@@ -7,7 +8,7 @@ const initialState = {
   lastName: '',
   email: '',
   password: '',
-  phoneNumber: '',
+  phone: '',
   resetPassword: '',
   rememberMe: false,
   agreement: false,
@@ -23,17 +24,57 @@ export const registerUser = createAsyncThunk(
   'auth/registerUser',
   async (values, { rejectWithValue }) => {
     try {
-      const token = await axiosInstance.post('/register', {})
-    } catch (error) {}
+      const token = await axiosInstance.post('/register', {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        password: values.password,
+        phone: values.phone,
+        agreement: values.agreement,
+      })
+      localStorage.setItem('token', token.data)
+
+      return token.data
+    } catch (error) {
+      console.log(error.response.data)
+      return rejectWithValue(error.response.data)
+    }
   }
 )
 
 const userSlice = createSlice({
-  name: 'login',
+  name: 'auth',
   initialState,
   reducers: {},
 
-  extraReducers: () => {},
+  extraReducers: (builder) => {
+    builder.addCase(registerUser.pending, (state, action) => {
+      return { ...state, registerStatus: 'pending' }
+    })
+    builder.addCase(registerUser.fulfilled, (state, action) => {
+      if (action.payload) {
+        const user = jwtDecode(action.payload)
+        return {
+          ...state,
+          token: action.payload,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phone: user.phone,
+          agreement: user.agreement,
+          _id: user._id,
+          registerStatus: 'success',
+        }
+      } else return state
+    })
+    builder.addCase(registerUser.rejected, (state, action) => {
+      return {
+        ...state,
+        registerStatus: 'rejected',
+        registerError: action.payload,
+      }
+    })
+  },
 
   // another way of consuming api
   // reducers: {
@@ -52,4 +93,4 @@ const userSlice = createSlice({
   // },
 })
 
-export default userSlice
+export default userSlice.reducer
