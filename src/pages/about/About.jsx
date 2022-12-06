@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className='aboutContainer'>
       <AboutHero />
-      {/* <AboutIntro /> */}
+      <AboutIntro />
       {/* <AboutServices /> */}
     </div>
   )

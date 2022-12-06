@@ -77,3 +77,40 @@
   text-align: center;
   color: #000000;
 }
+
+@media only screen and (max-width: 480px) {
+  .aboutIntroContainer {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  .aboutIntroWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .aboutIntroH {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .aboutIntroLWrapper,
+  .aboutIntroRWrapper {
+    width: 300px;
+    height: 300px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .aboutIntroLWrapper {
+    border-radius: 5px 100px;
+  }
+  .aboutIntroRWrapper {
+    border-radius: 100px 5px;
+  }
+  .aboutIntroT {
+    margin-top: 40px;
+    padding: 0;
+    font-size: 25px;
+  }
+}
