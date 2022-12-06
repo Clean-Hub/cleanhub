@@ -3,10 +3,14 @@ import axiosInstance from '../utils/axiosInstance'
 
 const initialState = {
   token: localStorage.getItem('token'),
+  firstName: '',
+  lastName: '',
   email: '',
   password: '',
+  phoneNumber: '',
   resetPassword: '',
   rememberMe: false,
+  agreement: false,
   _id: '',
   registerStatus: '',
   registerError: '',
