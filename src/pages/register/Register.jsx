@@ -1,15 +1,31 @@
 import './register.css'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
+import { registerUser } from '../../slices/userSlice'
 
 const Register = () => {
   const [credentials, setCredentials] = useState({
-    username: undefined,
-    password: undefined,
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    phone: '',
+    agreement: '',
   })
+  const dispatch = useDispatch()
+
+  const handleChange = (e) => {
+    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+  }
+  const handleClick = (e) => {
+    e.preventDefault()
+    dispatch(registerUser(credentials))
+    console.log('credentials', credentials)
+  }
 
   return (
     <div className='registerContainer'>
@@ -31,58 +47,93 @@ const Register = () => {
         <form action='' className='registerRForm'>
           <div className='user'>
             <div className='userL'>
-              <label for='lname' className='registerRFormL'>
+              <label htmlFor='lname' className='registerRFormL'>
                 Firstname
               </label>
               <div className='userDivider'>
-                <input type='text' className='passwordBtn' />
+                <input
+                  type='text'
+                  className='passwordBtn'
+                  id='firstName'
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className='userR'>
-              <label for='lname' className='registerRFormL'>
+              <label htmlFor='lname' className='registerRFormL'>
                 Lastname
               </label>
               <div className='userDivider'>
-                <input type='text' className='passwordBtn' />
+                <input
+                  type='text'
+                  className='passwordBtn'
+                  id='lastName'
+                  onChange={handleChange}
+                />
               </div>
             </div>
           </div>
-          <label for='lname' className='registerRFormL'>
+          <label htmlFor='lname' className='registerRFormL'>
             Phone
           </label>
           <div className='inputPass'>
-            <input type='text' className='passwordBtn' />
+            <input
+              type='text'
+              className='passwordBtn'
+              id='phone'
+              onChange={handleChange}
+            />
           </div>
-          <label for='lname' className='registerRFormL'>
+          <label htmlFor='lname' className='registerRFormL'>
             Email
           </label>
           <div className='inputPass'>
-            <input type='email' className='passwordBtn' />
+            <input
+              type='email'
+              className='passwordBtn'
+              id='email'
+              onChange={handleChange}
+            />
           </div>
 
           <div className='user'>
             <div className='userL'>
-              <label for='lname' className='registerRFormL'>
+              <label htmlFor='lname' className='registerRFormL'>
                 Password
               </label>
               <div className='userDivider'>
-                <input type='password' className='passwordBtn' />
+                <input
+                  type='password'
+                  className='passwordBtn'
+                  id='password'
+                  onChange={handleChange}
+                />
                 <FontAwesomeIcon icon={faEye} className='eyes' />
               </div>
             </div>
             <div className='userR'>
-              <label for='lname' className='registerRFormL'>
+              <label htmlFor='lname' className='registerRFormL'>
                 Confirm Password
               </label>
               <div className='userDivider'>
-                <input type='password' className='passwordBtn' />
+                <input
+                  type='password'
+                  className='passwordBtn'
+                  id='password2'
+                  onChange={handleChange}
+                />
                 <FontAwesomeIcon icon={faEye} className='eyes' />
               </div>
             </div>
           </div>
         </form>
         <div className='registerTerms'>
-          <input type='checkbox' className='registerTermsCheck' />
+          <input
+            type='checkbox'
+            className='registerTermsCheck'
+            id='agreement'
+            onChange={handleChange}
+          />
           <p className='registerTermsP'>
             I agree to Cleanhub’s
             <span className='registerTermsSp'> Terms of Condition</span> and
@@ -90,7 +141,9 @@ const Register = () => {
           </p>
         </div>
         <div className='registerSignInSocial'>
-          <button className='registerSignInBtn'>SIGN UP</button>
+          <button className='registerSignInBtn' onClick={handleClick}>
+            SIGN UP
+          </button>
           <span className='registerSignInSocialOr'>OR</span>
           <button className='registerSignInSocialG'>
             <span className='g'>G</span>
