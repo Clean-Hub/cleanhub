@@ -2,7 +2,6 @@ import './login.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
-import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -10,8 +9,8 @@ import { loginUser } from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const Login = () => {
-  const [rememberMe, setRememberMe] = useState(false)
+const Login = ({ id }) => {
+  // const [rememberMe, setRememberMe] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -27,7 +26,11 @@ const Login = () => {
   }
 
   const handleChange = (e) => {
-    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    if (e.target.id === 'rememberMe') {
+      setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.checked }))
+    } else {
+      setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    }
   }
 
   const handleClick = (e) => {
@@ -95,10 +98,15 @@ const Login = () => {
           <div className='rememberMe'>
             <p className='rememeberMeText'>Remember Me</p>
             <div className='rememberMeCB'>
-              <RememberMe
-                id={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-              />
+              <label className='inputWrapper'>
+                <input
+                  type='checkbox'
+                  onChange={handleChange}
+                  className='input'
+                  id='rememberMe'
+                />
+                <span className='inputSpan' />
+              </label>
             </div>
           </div>
         </div>
