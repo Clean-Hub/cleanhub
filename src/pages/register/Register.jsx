@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-regular-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 import { Link, useNavigate } from 'react-router-dom'
 import { registerUser } from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
@@ -12,6 +12,8 @@ import 'react-toastify/dist/ReactToastify.css'
 const Register = () => {
   const navigate = useNavigate()
   const user = useSelector((state) => state.user)
+  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword2, setShowPassword2] = useState(false)
 
   useEffect(() => {
     if (user.email) {
@@ -30,6 +32,14 @@ const Register = () => {
   })
   const [error, setError] = useState('')
   const dispatch = useDispatch()
+
+  const showPasswordHandler = () => {
+    setShowPassword(!showPassword)
+  }
+
+  const showPasswordHandler2 = () => {
+    setShowPassword2(!showPassword2)
+  }
 
   const handleChange = (e) => {
     if (e.target.id === 'agreement') {
@@ -132,12 +142,18 @@ const Register = () => {
               </label>
               <div className='userDivider'>
                 <input
-                  type='password'
+                  type={showPassword ? 'text' : 'password'}
                   className='passwordBtn'
                   id='password'
                   onChange={handleChange}
                 />
-                <FontAwesomeIcon icon={faEye} className='eyes' />
+                <span onClick={showPasswordHandler}>
+                  {showPassword ? (
+                    <FontAwesomeIcon icon={faEye} className='eyes' />
+                  ) : (
+                    <FontAwesomeIcon icon={faEyeSlash} className='eyes' />
+                  )}
+                </span>
               </div>
             </div>
             <div className='userR'>
@@ -146,12 +162,18 @@ const Register = () => {
               </label>
               <div className='userDivider cf2'>
                 <input
-                  type='password'
+                  type={showPassword2 ? 'text' : 'password'}
                   className='passwordBtn'
                   id='password2'
                   onChange={handleChange}
                 />
-                <FontAwesomeIcon icon={faEye} className='eyes' />
+                <span onClick={showPasswordHandler2}>
+                  {showPassword2 ? (
+                    <FontAwesomeIcon icon={faEye} className='eyes' />
+                  ) : (
+                    <FontAwesomeIcon icon={faEyeSlash} className='eyes' />
+                  )}
+                </span>
               </div>
 
               {error && <p className='cperror'> {error}</p>}
