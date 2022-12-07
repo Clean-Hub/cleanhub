@@ -16,14 +16,24 @@ const Register = () => {
     phone: '',
     agreement: '',
   })
+
+  const [error, setError] = useState(null)
   const dispatch = useDispatch()
 
   const handleChange = (e) => {
-    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    if (e.target.id === 'agreement') {
+      setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.checked }))
+    } else {
+      setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    }
   }
   const handleClick = (e) => {
     e.preventDefault()
-    dispatch(registerUser(credentials))
+    if (credentials.password === credentials.password2) {
+      dispatch(registerUser(credentials))
+    } else {
+      setError('your password does not match')
+    }
     console.log('credentials', credentials)
   }
 
@@ -124,6 +134,7 @@ const Register = () => {
                 />
                 <FontAwesomeIcon icon={faEye} className='eyes' />
               </div>
+              {error && <p style={{ color: 'red' }}>{error}</p>}
             </div>
           </div>
         </form>
