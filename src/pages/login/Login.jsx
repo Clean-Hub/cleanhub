@@ -2,15 +2,15 @@ import './login.css'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { loginUser } from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = ({ id }) => {
-  // const [rememberMe, setRememberMe] = useState(false)
+  const user = useSelector((state) => state.user)
   const [showPassword, setShowPassword] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -20,6 +20,12 @@ const Login = ({ id }) => {
     password: '',
     rememberMe: '',
   })
+
+  useEffect(() => {
+    if (user.email) {
+      navigate('/')
+    }
+  }, [user.email, navigate])
 
   const showPasswordHandler = () => {
     setShowPassword(!showPassword)
