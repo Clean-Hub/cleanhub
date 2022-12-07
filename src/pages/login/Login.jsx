@@ -6,21 +6,20 @@ import RememberMe from '../../components/rememberMe/RememberMe'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import axiosInstance from '../../utils/axiosInstance'
-import userSlice from '../../slices/userSlice'
+import { loginUser } from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
   const [rememberMe, setRememberMe] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
-  const { login } = userSlice.actions
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const [credentials, setCredentials] = useState({
-    email: undefined,
-    password: undefined,
+    email: '',
+    password: '',
+    rememberMe: '',
   })
 
   const showPasswordHandler = () => {
@@ -31,26 +30,22 @@ const Login = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
   }
 
-  const handleClick = async (e) => {
+  const handleClick = (e) => {
     e.preventDefault()
-    try {
-      const res = await axiosInstance.post('/login', credentials)
-      navigate('/')
-      console.log('res', res)
-      dispatch(login({ ...res.data }))
-      toast.success(res.data.success, {
-        position: toast.POSITION.TOP_RIGHT,
-      })
-
-      if (rememberMe) {
-        localStorage.setItem('token', res.data.token)
-      }
-    } catch (err) {
-      toast.error(err.response.data.error, {
-        position: toast.POSITION.TOP_RIGHT,
-      })
-    }
+    dispatch(loginUser(credentials))
   }
+
+  // const handleClick = async (e) => {
+  //   e.preventDefault()
+  //   try {
+  //     const res = await axiosInstance.post('/login', credentials)
+  //     dispatch(loginUser(credentials))
+
+  //     if (rememberMe) {
+  //       localStorage.setItem('token', res.data.token)
+  //     }
+  //   } catch (err) {}
+  // }
 
   return (
     <div className='loginContainer'>
@@ -100,7 +95,10 @@ const Login = () => {
           <div className='rememberMe'>
             <p className='rememeberMeText'>Remember Me</p>
             <div className='rememberMeCB'>
-              <RememberMe onChange={(e) => setRememberMe(e.target.checked)} />
+              <RememberMe
+                id={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
             </div>
           </div>
         </div>

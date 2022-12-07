@@ -1,27 +1,13 @@
 // import { useState } from 'react'
 import './rememberMe.css'
 
-const RememberMe = ({ onChange }) => {
-  // const [click, setClick] = useState(false)
-
-  // const toggleHandler = () => {
-  //   setClick(!click)
-  // }
+const RememberMe = ({ onChange, id }) => {
   return (
     // This is another pattern of button slider
     <label className='inputWrapper'>
-      <input type='checkbox' onChange={onChange} className='input' />
+      <input type='checkbox' onChange={onChange} className='input' id={id} />
       <span className='inputSpan' />
     </label>
-
-    // This is another pattern of button slider
-    // <div className='toggle-btn'>
-    //   <div
-    //     onClick={toggleHandler}
-    //     className={click ? 'toggle-btn--circle toggle' : 'toggle-btn--circle'}
-    //   ></div>
-    //   <div className='toggle-btn--slider'></div>
-    // </div>
   )
 }
 
