@@ -33,3 +33,13 @@
   margin-left: 50px;
   margin-right: 90px;
 }
+
+@media only screen and (max-width: 480px) {
+  .aboutServicesContainer {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 30px;
+    display: flex;
+  }
+}
