@@ -96,47 +96,50 @@ const Login = ({ id }) => {
               )}
             </span>
           </div>
-        </form>
-        <div className='forgetP'>
-          <p className='forgetPw'>
-            Forget Password? <span className='reset'>Reset Password</span>
-          </p>
-          <div className='rememberMe'>
-            <p className='rememeberMeText'>Remember Me</p>
-            <div className='rememberMeCB'>
-              <label className='inputWrapper'>
-                <input
-                  type='checkbox'
-                  onChange={handleChange}
-                  className='input'
-                  id='rememberMe'
-                />
-                <span className='inputSpan' />
-              </label>
+          <div className='forgetP'>
+            <p className='forgetPw'>
+              Forget Password? <span className='reset'>Reset Password</span>
+            </p>
+            <div className='rememberMe'>
+              <p className='rememeberMeText'>Remember Me</p>
+              <div className='rememberMeCB'>
+                <label className='inputWrapper'>
+                  <input
+                    type='checkbox'
+                    onChange={handleChange}
+                    className='input'
+                    id='rememberMe'
+                  />
+                  <span className='inputSpan' />
+                </label>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='signInSocial'>
-          <button className='signInSocialS' onClick={handleClick}>
-            SIGN IN
-          </button>
-          <span className='signInSocialOr'>OR</span>
-          <button className='signInSocialG'>
-            <span className='g'>G</span>
-            <span className='o1'>O</span>
-            <span className='o2'>O</span>
-            <span className='g'>G</span>
-            <span className='o2'>L</span>
-            <span className='o1'>E</span>
-          </button>
-          <button className='signInSocialF'>FACEBOOK</button>
-        </div>
-        <div className='signInB'>
-          <p className='signInP'>Already have an account?</p>
-          <Link to='/register'>
-            <button className='signInBtn'>SIGN UP</button>
-          </Link>
-        </div>
+          <div className='signInSocial'>
+            <button className='signInSocialS' onClick={handleClick}>
+              {user.loginStatus ? 'SUBMITTING' : 'SIGN IN'}
+            </button>
+            <span className='signInSocialOr'>OR</span>
+            <button className='signInSocialG'>
+              <span className='g'>G</span>
+              <span className='o1'>O</span>
+              <span className='o2'>O</span>
+              <span className='g'>G</span>
+              <span className='o2'>L</span>
+              <span className='o1'>E</span>
+            </button>
+            <button className='signInSocialF'>FACEBOOK</button>
+          </div>
+          <div className='signInB'>
+            <p className='signInP'>Already have an account?</p>
+            <Link to='/register'>
+              <button className='signInBtn'>SIGN UP</button>
+            </Link>
+          </div>
+          {user.loginStatus === 'rejected' ? (
+            <p className='formP'>{user.loginError}</p>
+          ) : null}
+        </form>
       </div>
     </div>
   )
