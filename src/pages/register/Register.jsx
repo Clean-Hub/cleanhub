@@ -1,16 +1,24 @@
 import './register.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import logo from '../../assets/img/loginLogo.PNG'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { registerUser } from '../../slices/userSlice'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Register = () => {
+  const navigate = useNavigate()
   const user = useSelector((state) => state.user)
+
+  useEffect(() => {
+    if (user.email) {
+      navigate('/login')
+    }
+  }, [navigate, user.email])
+
   const [credentials, setCredentials] = useState({
     firstName: '',
     lastName: '',
@@ -149,38 +157,38 @@ const Register = () => {
               {error && <p className='cperror'> {error}</p>}
             </div>
           </div>
+          <div className='registerTerms'>
+            <input
+              type='checkbox'
+              className='registerTermsCheck'
+              id='agreement'
+              onChange={handleChange}
+            />
+            <p className='registerTermsP'>
+              I agree to Cleanhub’s
+              <span className='registerTermsSp'> Terms of Condition</span> and
+              <span className='registerTermsSp'> Privacy Policy</span>
+            </p>
+          </div>
+          <div className='registerSignInSocial'>
+            <button className='registerSignInBtn' onClick={handleClick}>
+              {user.registerStatus ? 'SUBMITTING' : 'SIGN UP'}
+            </button>
+            <span className='registerSignInSocialOr'>OR</span>
+            <button className='registerSignInSocialG'>
+              <span className='g'>G</span>
+              <span className='o1'>O</span>
+              <span className='o2'>O</span>
+              <span className='g'>G</span>
+              <span className='o2'>L</span>
+              <span className='o1'>E</span>
+            </button>
+            <button className='registerSignInSocialF'>FACEBOOK</button>
+          </div>
           {user.registerStatus === 'rejected' ? (
             <p className='formP'>{user.registerError}</p>
           ) : null}
         </form>
-        <div className='registerTerms'>
-          <input
-            type='checkbox'
-            className='registerTermsCheck'
-            id='agreement'
-            onChange={handleChange}
-          />
-          <p className='registerTermsP'>
-            I agree to Cleanhub’s
-            <span className='registerTermsSp'> Terms of Condition</span> and
-            <span className='registerTermsSp'> Privacy Policy</span>
-          </p>
-        </div>
-        <div className='registerSignInSocial'>
-          <button className='registerSignInBtn' onClick={handleClick}>
-            SIGN UP
-          </button>
-          <span className='registerSignInSocialOr'>OR</span>
-          <button className='registerSignInSocialG'>
-            <span className='g'>G</span>
-            <span className='o1'>O</span>
-            <span className='o2'>O</span>
-            <span className='g'>G</span>
-            <span className='o2'>L</span>
-            <span className='o1'>E</span>
-          </button>
-          <button className='registerSignInSocialF'>FACEBOOK</button>
-        </div>
       </div>
     </div>
   )
