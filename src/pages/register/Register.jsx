@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 import { registerUser } from '../../slices/userSlice'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Register = () => {
   const [credentials, setCredentials] = useState({
@@ -13,11 +15,12 @@ const Register = () => {
     lastName: '',
     email: '',
     password: '',
+    password2: '',
     phone: '',
     agreement: '',
   })
 
-  const [error, setError] = useState(null)
+  const [error, setError] = useState('')
   const dispatch = useDispatch()
 
   const handleChange = (e) => {
@@ -34,11 +37,11 @@ const Register = () => {
     } else {
       setError('your password does not match')
     }
-    console.log('credentials', credentials)
   }
 
   return (
     <div className='registerContainer'>
+      <ToastContainer />
       <div className='registerL'>
         <img src={logo} alt='logo' className='registerLogo' />
         <div className='registerSignInB'>
@@ -133,8 +136,10 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <FontAwesomeIcon icon={faEye} className='eyes' />
+                {/* {error && toast.error(error, { position: 'bottom-right' })} */}
               </div>
-              {error && <p style={{ color: 'red' }}>{error}</p>}
+
+              {error && <p className='cperror'> {error}</p>}
             </div>
           </div>
         </form>
