@@ -10,6 +10,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Register = () => {
+  const user = useSelector((state) => state.user)
   const [credentials, setCredentials] = useState({
     firstName: '',
     lastName: '',
@@ -19,7 +20,7 @@ const Register = () => {
     phone: '',
     agreement: '',
   })
-
+  console.log('USER', user)
   const [error, setError] = useState('')
   const dispatch = useDispatch()
 
@@ -28,11 +29,19 @@ const Register = () => {
       setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.checked }))
     } else {
       setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+      if (e.target.id === 'password2') {
+        if (e.target.value !== credentials.password) {
+          setError('your password does not match')
+        } else {
+          setError(null)
+        }
+      }
     }
   }
   const handleClick = (e) => {
     e.preventDefault()
     if (credentials.password === credentials.password2) {
+      setError(null)
       dispatch(registerUser(credentials))
     } else {
       setError('your password does not match')
@@ -142,6 +151,9 @@ const Register = () => {
               {error && <p className='cperror'> {error}</p>}
             </div>
           </div>
+          {user.registerStatus === 'rejected' ? (
+            <p className='formP'>{user.registerError}</p>
+          ) : null}
         </form>
         <div className='registerTerms'>
           <input
