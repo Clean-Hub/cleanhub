@@ -20,7 +20,6 @@ const Register = () => {
     phone: '',
     agreement: '',
   })
-  console.log('USER', user)
   const [error, setError] = useState('')
   const dispatch = useDispatch()
 
@@ -145,7 +144,6 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <FontAwesomeIcon icon={faEye} className='eyes' />
-                {/* {error && toast.error(error, { position: 'bottom-right' })} */}
               </div>
 
               {error && <p className='cperror'> {error}</p>}
