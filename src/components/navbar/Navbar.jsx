@@ -1,11 +1,14 @@
 import './navbar.css'
 import logo from '../../assets/img/logo.png'
 import { Link, useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
 const Navbar = () => {
+  // const user = useSelector((state) => state.user)
+  const user = true
   const { pathname } = useLocation()
   const url = pathname.split('/')[1]
 
@@ -53,6 +56,13 @@ const Navbar = () => {
               BLOG
             </Link>
           </li>
+          {user && (
+            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+              <Link to='#' onClick={closeMenu}>
+                LOGOUT
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
       <div onClick={handleClick} className='icon'>

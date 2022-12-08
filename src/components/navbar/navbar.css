@@ -11,7 +11,7 @@
 .navbarLeft {
   flex: 1;
   padding-left: 90px;
-  padding-right: 100px;
+  padding-right: 30px;
   display: flex;
   align-items: center;
 }
@@ -32,9 +32,9 @@
   font-size: 19px;
   line-height: 26px;
   cursor: pointer;
-  padding-left: 13px;
+  padding-left: 10px;
   color: #ffffff;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .navbarLi2 {
