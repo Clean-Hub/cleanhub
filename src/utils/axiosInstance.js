@@ -10,8 +10,8 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   function async(config) {
-    // const token = localStorage.getItem('token')
-    // config.headers.token = token
+    const token = localStorage.getItem('token')
+    config.headers.token = token
     config.headers.contentType = 'application/json'
     return config
   },
