@@ -5,10 +5,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import { logoutUser } from '../../slices/userSlice'
+import { toast } from 'react-toastify'
 
 const Navbar = () => {
-  // const user = useSelector((state) => state.user)
-  const user = true
+  const user = useSelector((state) => state.user)
+  const dispatch = useDispatch()
   const { pathname } = useLocation()
   const url = pathname.split('/')[1]
 
@@ -56,11 +58,15 @@ const Navbar = () => {
               BLOG
             </Link>
           </li>
-          {user && (
-            <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
-              <Link to='#' onClick={closeMenu}>
-                LOGOUT
-              </Link>
+          {user.email && (
+            <li
+              className={!url ? 'navbarLi1' : 'navbarLi2'}
+              onClick={() => {
+                dispatch(logoutUser(null))
+                toast.warning('Logged out', { position: 'bottom-left' })
+              }}
+            >
+              <Link onClick={closeMenu}>LOGOUT</Link>
             </li>
           )}
         </ul>

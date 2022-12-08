@@ -1,3 +1,5 @@
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 import Navbar from './components/navbar/Navbar'
 // import './app.css'
 import Home from './pages/home/Home'
@@ -15,6 +17,7 @@ function App() {
     <div className='appContainer'>
       <BrowserRouter>
         <ScrollToTop>
+          <ToastContainer />
           <Navbar />
           <Routes>
             <Route path='*' element={<Navigate to='/not-found' replace />} />
