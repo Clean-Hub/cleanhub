@@ -18,7 +18,6 @@ const Login = ({ id }) => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: '',
-    rememberMe: '',
   })
 
   useEffect(() => {
