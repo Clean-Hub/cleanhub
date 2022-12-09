@@ -6,9 +6,9 @@ import './about.css'
 const About = () => {
   return (
     <div className='aboutContainer'>
-      {/* <AboutHero /> */}
-      {/* <AboutIntro /> */}
-      <AboutServices />
+      <AboutHero />
+      <AboutIntro />
+      {/* <AboutServices /> */}
     </div>
   )
 }
