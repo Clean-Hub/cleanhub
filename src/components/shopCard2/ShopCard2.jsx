@@ -12,8 +12,8 @@ import ch8 from '../../assets/img/recycleProd8.PNG'
 
 const ShopCard2 = () => {
   return (
-    <div className='howitworks-wrapper'>
-      <div className='howitworks-content'>
+    <div className='shop1Container'>
+      <div className='shop1Content'>
         <ShopCard1 img={ch1} title='Bottles For Sale' />
         <ShopCard1 img={ch2} title='Bottles and Can For Sale' />
         <ShopCard1 img={ch3} title='Clean Recycle For Sale' />

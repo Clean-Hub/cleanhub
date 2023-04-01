@@ -1,13 +1,15 @@
 .shopCard1 {
-  min-width: 20vw;
+  min-width: 30vw;
   min-height: 50vh;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 50px;
   overflow: hidden;
 }
 .card {
+  width: 80%;
   box-sizing: border-box;
   min-height: 20vh;
   border: 1px solid white;
@@ -20,6 +22,7 @@
   justify-content: center;
   font-weight: bolder;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .pContainer {
   display: flex;
@@ -28,6 +31,7 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 20px;
+  overflow: hidden;
 }
 .shopCardImg {
   transition: transform 0.1s;

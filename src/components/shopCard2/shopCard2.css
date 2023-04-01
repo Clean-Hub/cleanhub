@@ -1,25 +1,26 @@
-.howitworks-wrapper {
+.shop1Container {
   min-width: 100vw;
   min-height: 100vh;
+}
+
+.shop1Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 
-.howitworks-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media only screen and (max-width: 480px) {
-  .howitworks-wrapper {
+  .shop1Container {
     width: 100%;
     overflow: hidden;
   }
-  .howitworks-wrapper:first-child {
+  .shop1Container:first-child {
     margin-top: 100px;
   }
-  .howitworks-content {
+  .shop1Content {
     display: block;
-    /* justify-content: space-between; */
     margin: 0;
   }
 }
