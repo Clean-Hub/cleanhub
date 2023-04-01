@@ -58,6 +58,11 @@ const Navbar = () => {
               BLOG
             </Link>
           </li>
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='/shop' onClick={closeMenu}>
+              SHOP
+            </Link>
+          </li>
           {user.email && (
             <li
               className={!url ? 'navbarLi1' : 'navbarLi2'}

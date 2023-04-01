@@ -1,0 +1,25 @@
+.howitworks-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.howitworks-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 480px) {
+  .howitworks-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .howitworks-wrapper:first-child {
+    margin-top: 100px;
+  }
+  .howitworks-content {
+    display: block;
+    /* justify-content: space-between; */
+    margin: 0;
+  }
+}
