@@ -4,7 +4,6 @@ import HomeIntro from '../../components/homeIntro/HomeIntro'
 import HomeRecycling from '../../components/homeRecycling/HomeRecycling'
 import HomeRecycInfo from '../../components/homeRecycInfo/HomeRecycInfo'
 import Partners from '../../components/partners/Partners'
-import Book from '../book/Book'
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       <HomeRecycling />
       <HomeRecycInfo />
       <Partners />
-      <Book />
     </div>
   )
 }
