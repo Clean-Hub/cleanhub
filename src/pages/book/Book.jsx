@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Calendar.css'
+import './book.css'
 
 const Book = () => {
   const [selectedDate, setSelectedDate] = useState(null)
@@ -88,34 +88,3 @@ const Book = () => {
 }
 
 export default Book
-
-// .calendar {
-//   margin: 0 auto;
-//   width: 300px;
-// }
-
-// table {
-//   border-collapse: collapse;
-//   width: 100%;
-// }
-
-// th,
-// td {
-//   border: 1px solid #ccc;
-//   padding: 10px;
-//   text-align: center;
-// }
-
-// th {
-//   background-color: #eee;
-// }
-
-// td:hover {
-//   background-color: #eee;
-//   cursor: pointer;
-// }
-
-// .selected {
-//   background-color: #008cba;
-//   color: #fff;
-// }
