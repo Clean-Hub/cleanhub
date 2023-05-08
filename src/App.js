@@ -13,6 +13,7 @@ import ScrollToTop from './components/scrollToTip/ScrollToTop'
 import AboutServices from './components/aboutServices/AboutServices'
 import NotFound from './components/notFound/NotFound'
 import Shop from './pages/shop/Shop'
+import Book from './pages/book/Book'
 function App() {
   return (
     <div className='appContainer'>
@@ -26,6 +27,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/shop' element={<Shop />} />
+            <Route path='/book' element={<Book />} />
             <Route path='/about' element={<About />}>
               <Route path='/about/aboutUs' element={<AboutIntro />} />
               <Route path='/about/service' element={<AboutServices />} />
