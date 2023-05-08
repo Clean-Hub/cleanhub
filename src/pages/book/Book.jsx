@@ -3,6 +3,11 @@ import './book.css'
 
 const Book = () => {
   const [selectedDate, setSelectedDate] = useState(null)
+  const [bookedDates, setBookedDates] = useState([
+    new Date(2023, 5, 10),
+    new Date(2023, 5, 15),
+    new Date(2023, 5, 20),
+  ]) // preset booked dates for demonstration purposes
   const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   const months = [
     'January',
@@ -31,6 +36,12 @@ const Book = () => {
     return new Date(year, month, 1).getDay()
   }
 
+  const isBookedDate = (date) => {
+    return bookedDates.some(
+      (bookedDate) => bookedDate.toDateString() === date.toDateString()
+    )
+  }
+
   const renderCells = () => {
     const daysInMonthCount = daysInMonth(month, year)
     const firstDay = firstDayOfMonth(month, year)
@@ -49,11 +60,15 @@ const Book = () => {
         } else {
           const date = new Date(year, month, day)
           const selected = selectedDate?.toDateString() === date.toDateString()
+          const booked = isBookedDate(date)
+          const disabled = booked || date < today
           cells.push(
             <td
               key={j}
-              className={`${selected ? 'selected' : ''}`}
-              onClick={() => setSelectedDate(date)}
+              className={`${selected ? 'selected' : ''} ${
+                booked ? 'booked' : ''
+              }`}
+              onClick={() => !disabled && setSelectedDate(date)}
             >
               {day}
             </td>
@@ -66,6 +81,13 @@ const Book = () => {
     }
 
     return rows
+  }
+
+  const handleBookDates = () => {
+    if (selectedDate && !isBookedDate(selectedDate)) {
+      setBookedDates([...bookedDates, selectedDate])
+      setSelectedDate(null)
+    }
   }
 
   return (
@@ -83,6 +105,15 @@ const Book = () => {
         </thead>
         <tbody>{renderCells()}</tbody>
       </table>
+      <div className='booking'>
+        <h3>Booking</h3>
+        {selectedDate && (
+          <div>
+            <p>You have selected {selectedDate.toDateString()}</p>
+            <button onClick={handleBookDates}>Book</button>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
