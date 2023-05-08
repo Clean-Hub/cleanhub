@@ -53,9 +53,14 @@ const Navbar = () => {
               CONTACT
             </Link>
           </li>
-          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+          {/* <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
             <Link to='#' onClick={closeMenu}>
               BLOG
+            </Link>
+          </li> */}
+          <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
+            <Link to='/book' onClick={closeMenu}>
+              BOOK
             </Link>
           </li>
           <li className={!url ? 'navbarLi1' : 'navbarLi2'}>
