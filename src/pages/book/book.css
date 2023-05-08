@@ -19,7 +19,7 @@ th {
   background-color: #eee;
 }
 
-td:hover {
+td:hover:not(.booked) {
   background-color: #eee;
   cursor: pointer;
 }
@@ -27,4 +27,25 @@ td:hover {
 .selected {
   background-color: #008cba;
   color: #fff;
+}
+
+.booked {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.booking {
+  margin-top: 20px;
+}
+
+.booking h3 {
+  margin: 0;
+}
+
+.booking p {
+  margin: 0;
+}
+
+.booking button {
+  margin-top: 10px;
 }
