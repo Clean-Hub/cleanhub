@@ -106,7 +106,7 @@
 
 import React, { useState } from 'react'
 import './book.css'
-import Booking from './booking/Booking'
+import Booking from '../booking/Booking'
 
 const Book = () => {
   const [selectedDate, setSelectedDate] = useState(null)
