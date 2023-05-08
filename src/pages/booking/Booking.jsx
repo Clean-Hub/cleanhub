@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './booking.css'
 
 function Booking(props) {
   const { selectedDate, handleBookDates } = props
